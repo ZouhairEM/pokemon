@@ -9,6 +9,7 @@ body {
 
 .pokedex {
   max-width: 1000px;
+  min-height: 50vh;
 }
 
 .pokemon-bio {
