@@ -3,8 +3,12 @@ body {
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
 }
 
+:root{
+  font-size: 0.9rem;
+}
+
 .pokedex {
-  /* background: #; */
+  max-width: 1000px;
 }
 
 .pokemon-bio {
@@ -14,4 +18,19 @@ body {
 div.white-card {
   border-top-left-radius: 2em!important;
   border-top-right-radius: 2em!important;
+}
+
+.grass-type{
+  background: #8AB181;
+}
+.fire-type{
+  background:#FF8B78;
+}
+.water-type{
+  background: #ADD2FF;
+}
+
+input{
+  background: rgb(228, 228, 228);
+  border: none
 }

@@ -1,31 +1,25 @@
-import { useState } from "react";
-
-const PokemonBio = () => {
-    const [pokemons, setPokemons] = useState([{
-        name: "Charmander",
-        type: "Fire",
-        cover: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
-        abilities: ["Flamethrower", "Bark", "Bite", "Ember"],
-    }])
-
+const PokemonBio = ({pokemons}) => {
     return (
-        <div>
+        <div className="row d-flex justify-content-between">
             {pokemons.map((pokemon, i) => (
-                <div key={i} className={`col-3 pokemon-bio shadow p-0 rounded 
-                ${pokemon.type === 'Fire' ? 'fire' : ''}`}>
+                <div key={i} className={`col-3 mb-3 mx-4 pokemon-bio position-relative shadow rounded ${pokemon.type.toLowerCase()}-type`} style={{ cursor: 'pointer' }}>
                     <div className="p-3">
-                        <div className="top-text d-flex justify-content-between">
-                            <h3 className="fw-bold text-light">
-                                {pokemon.type}
-                            </h3>
-                            <h3 className="fw-bold text-light">
-                                #00{i+1}
-                            </h3>
+                        <div className="col-12 d-flex flex-column" style={{ height: '140px'} }>
+                            <div className="col-12 top-text d-flex justify-content-between">
+                                <h3 className="fw-bold text-light">
+                                    {pokemon.type}
+                                </h3>
+                                <h3 className="fw-bold text-light">
+                                    #00{i + 1}
+                                </h3>
+                            </div>
+                            <div className="col-12 cover d-flex justify-content-center">
+                                <img src={pokemon.cover} alt={pokemon.name} className="position-absolute" style={{ bottom: '20%', maxWidth: 140 }} />
+                            </div>
                         </div>
-                        <img src={pokemon.cover} alt={pokemon.name} style={{ maxWidth: 150 }} />
                     </div>
                     <div className="white-card col-12 bg-white rounded-top p-3">
-                        <h3>{pokemon.name}</h3>
+                        <h3 className="fw-bold">{pokemon.name}</h3>
                     </div>
                 </div>
             ))}
