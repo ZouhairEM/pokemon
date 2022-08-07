@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import PokemonBio from './components/PokemonBio';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container min-vw-100 min-vh-100 d-flex justify-content-center align-items-center">
+      <div className="row pokedex shadow p-4 col-11">
+        <div className="h1 fw-bold mx-0 mb-3 d-flex">
+          Pokedex
+        </div>
+        <PokemonBio />
+      </div>
     </div>
   );
 }
