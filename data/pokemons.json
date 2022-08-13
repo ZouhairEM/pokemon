@@ -6,9 +6,54 @@
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
     },
     {
+      "name": "Pikachu",
+      "type": "Yellow",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+    },
+    {
+      "name": "Bulbasaur",
+      "type": "Grass",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+    },
+    {
+      "name": "Bulbasaur",
+      "type": "Grass",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+    },
+    {
       "name": "Charmander",
       "type": "Fire",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+    },
+    {
+      "name": "Charmander",
+      "type": "Fire",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+    },
+    {
+      "name": "Charmander",
+      "type": "Fire",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+    },
+    {
+      "name": "Squirtle",
+      "type": "Water",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+      "name": "Squirtle",
+      "type": "Water",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+      "name": "Squirtle",
+      "type": "Water",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+      "name": "Squirtle",
+      "type": "Water",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
     },
     {
       "name": "Squirtle",

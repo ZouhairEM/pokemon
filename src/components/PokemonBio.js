@@ -1,10 +1,10 @@
 const PokemonBio = ({pokemons}) => {
     return (
-        <div className="row d-flex justify-content-between">
+        <div className="row d-flex justify-content-start">
             {pokemons.map((pokemon, i) => (
-                <div key={i} className={`col-3 mb-3 mx-4 pokemon-bio position-relative shadow rounded ${pokemon.type.toLowerCase()}-type`} style={{ cursor: 'pointer' }}>
+                <div key={i} className={`col-2 my-3 mx-3 pokemon-bio position-relative shadow rounded ${pokemon.type.toLowerCase()}-type`} style={{ cursor: 'pointer' }}>
                     <div className="p-3">
-                        <div className="col-12 d-flex flex-column" style={{ height: '140px'} }>
+                        <div className="col-12 d-flex flex-column" style={{ height: '100px'} }>
                             <div className="col-12 top-text d-flex justify-content-between">
                                 <h3 className="fw-bold text-light">
                                     {pokemon.type}
@@ -14,7 +14,7 @@ const PokemonBio = ({pokemons}) => {
                                 </h3>
                             </div>
                             <div className="col-12 cover d-flex justify-content-center">
-                                <img src={pokemon.cover} alt={pokemon.name} className="position-absolute" style={{ bottom: '20%', maxWidth: 140 }} />
+                                <img src={pokemon.cover} alt={pokemon.name} className="position-absolute img-fluid" style={{ bottom: '20%', maxWidth: 90 }} />
                             </div>
                         </div>
                     </div>

@@ -1,17 +1,17 @@
 body {
   font-family: monospace!important;
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+  margin: 0;
 }
 
-:root{
-  font-size: 0.9rem;
+:root {
+  font-size: 62.5%;
 }
 
 .pokedex {
-  max-width: 1000px;
-  min-height: 50vh;
+  max-width: 1200px;
+  min-height: 36vh;
 }
-
 .pokemon-bio {
   background: #fc787b;
 }
@@ -35,4 +35,15 @@ input{
   background: rgb(228, 228, 228);
   border: none;
   outline: none;
+}
+
+div.pokedex {
+  min-width: 50vw;
+}
+
+#page-numbers {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  cursor: pointer;
 }
