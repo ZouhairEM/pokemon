@@ -47,3 +47,7 @@ div.pokedex {
   justify-content: start;
   cursor: pointer;
 }
+
+.page-number:hover {
+  color: red;
+}

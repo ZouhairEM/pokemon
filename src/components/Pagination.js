@@ -9,6 +9,7 @@ class Pagination extends React.Component {
       currentPage: 1,
       pokemonsPerPage: 3
     };
+    
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -44,9 +45,11 @@ class Pagination extends React.Component {
 
     return (
       <div>
-        {currentPokemons && <PokemonBio pokemons={currentPokemons} />}
+        {currentPokemons && <PokemonBio currentPokemons={currentPokemons} />}
         <div id="page-numbers">
-          {renderPageNums}
+          <div className="d-flex">
+            {renderPageNums.map((pageNum, i)=> { return (<h3 key={i} className="page-number mx-2 fw-bold">{pageNum}</h3>) })}
+          </div>
         </div>
       </div>
     );

@@ -1,7 +1,9 @@
-const PokemonBio = ({pokemons}) => {
+// import { useState, useEffect } from "react";
+
+const PokemonBio = ({currentPokemons}) => {
     return (
         <div className="row d-flex justify-content-start">
-            {pokemons.map((pokemon, i) => (
+            {currentPokemons.map((pokemon, i) => (
                 <div key={i} className={`col-2 my-3 mx-3 pokemon-bio position-relative shadow rounded ${pokemon.type.toLowerCase()}-type`} style={{ cursor: 'pointer' }}>
                     <div className="p-3">
                         <div className="col-12 d-flex flex-column" style={{ height: '100px'} }>
