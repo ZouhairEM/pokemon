@@ -1,61 +1,79 @@
 {
   "pokemons": [
     {
-      "name": "Bulbasaur",
+      "id": "001",
+      "name": "Charizard",
       "type": "Grass",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
     },
     {
+      "id": "002",
       "name": "Pikachu",
       "type": "Yellow",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
     },
     {
+      "id": "003",
       "name": "Bulbasaur",
       "type": "Grass",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
     },
     {
+      "id": "004",
       "name": "Bulbasaur",
       "type": "Grass",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
     },
     {
+      "id": "005",
       "name": "Charmander",
       "type": "Fire",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
     },
     {
+      "id": "007",
       "name": "Charmander",
       "type": "Fire",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
     },
     {
+      "id": "008",
       "name": "Charmander",
       "type": "Fire",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
     },
     {
+      "id": "009",
       "name": "Squirtle",
       "type": "Water",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
     },
     {
+      "id": "010",
       "name": "Squirtle",
       "type": "Water",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
     },
     {
+      "id": "011",
       "name": "Squirtle",
       "type": "Water",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
     },
     {
+      "id": "012",
       "name": "Squirtle",
       "type": "Water",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
     },
     {
+      "id": "013",
+      "name": "Zapdos",
+      "type": "Electric",
+      "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+      "id": "014",
       "name": "Squirtle",
       "type": "Water",
       "cover": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"

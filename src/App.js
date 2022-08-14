@@ -1,18 +1,22 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 // import SearchBar from './components/SearchBar';
-// import PokemonBio from './components/PokemonBio';
 import Pagination from './components/Pagination';
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [pokemons, setPokemons] = useState("");
+  const [pokemons, setPokemons] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
-  const search = (pokemons) => {
-    return pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(query) || pokemon.type.toLowerCase().includes(query))
-  }
   
+  const filteredPokemon = pokemons.filter(({ name, type }) => {
+    if (name.toLowerCase().includes(query.toLowerCase()) || type.toLowerCase().includes(query.toLowerCase())) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
   useEffect(() => {
     fetch('http://localhost:8000/pokemons')
       .then(res => {
@@ -24,13 +28,9 @@ function App() {
       })
   }, [])
 
-  useEffect(() => {
-    console.log('use effect ran');
-  })
-
   return (
     <div className="App container d-flex justify-content-center align-items-center">
-      { isLoaded && 
+      {isLoaded &&
         (<div className="pokedex shadow p-4">
           <div className="d-flex justify-content-center">
             <div className='position-relative'>
@@ -38,17 +38,16 @@ function App() {
               <input
                 placeholder="Search by name or type"
                 className="py-3 p-5 rounded mx-2 fw-bold w-100"
-                onChange={e => setQuery(e.target.value)}
+                onChange={(e) => setQuery(e.target.value)}
               />
             </div>
           </div>
           <div className="h1 fw-bold mx-0 mb-3 d-flex">
             Pokedex
           </div>
-          {/* {pokemons && <PokemonBio pokemons={search(pokemons)} />} */}
-          {/* {search(pokemons).length === 0 ? ( <div className='col-12'> No Pokémon or type found</div> ) : ''} */}
-          {pokemons && <Pagination search={search} pokemons={search(pokemons)} />}
-          {/* {pokemons && <Pagination search={search} pokemons={search(pokemons)} />} */}
+
+          {/* {query && filteredPokemon.length === 0 ? (<div className='col-12'> No Pokémon or type found</div>) : ''} */}
+          <Pagination pokemons={filteredPokemon} />
         </div>)
       }
     </div>
