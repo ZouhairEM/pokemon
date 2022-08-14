@@ -34,7 +34,7 @@ function App() {
         (<div className="pokedex shadow p-4">
           <div className="d-flex justify-content-center">
             <div className='position-relative'>
-              <img src={require('./assets/icons/search.png')} alt="Search" className='position-absolute top-50 start-0 offset-1' style={{ width: 13 }} />
+              <img src={require('./assets/icons/search.png')} alt="Search" className='search position-absolute top-50 start-0 offset-1' />
               <input
                 placeholder="Search by name or type"
                 className="py-3 p-5 rounded mx-2 fw-bold w-100"
