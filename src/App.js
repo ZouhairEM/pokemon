@@ -9,8 +9,8 @@ function App() {
   const [query, setQuery] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
   
-  const filteredPokemon = pokemons.filter(({ name, type }) => {
-    if (name.toLowerCase().includes(query.toLowerCase()) || type.toLowerCase().includes(query.toLowerCase())) {
+  const filteredPokemon = pokemons.filter(({ name}) => {
+    if (name.toLowerCase().includes(query.toLowerCase())) {
       return true;
     } else {
       return false;
