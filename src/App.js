@@ -8,9 +8,9 @@ function App() {
   const [pokemons, setPokemons] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
-  
-  const filteredPokemon = pokemons.filter(({ name}) => {
-    if (name.toLowerCase().includes(query.toLowerCase())) {
+
+  const filteredPokemon = pokemons.filter(({ name, type }) => {
+    if (name.toLowerCase().includes(query.toLowerCase()) || type[0].toLowerCase().includes(query.toLowerCase())) {
       return true;
     } else {
       return false;
@@ -29,24 +29,22 @@ function App() {
   }, [])
 
   return (
-    <div className="App container d-flex justify-content-center align-items-center">
+    <div className="App container shadow">
       {isLoaded &&
-        (<div className="pokedex shadow p-4">
-          <div className="d-flex justify-content-center">
+        (<div className='row'>
+            <h2 className="mx-0 mb-3">
+              Pokedex
+            </h2>
+          <div className="d-flex h-25 justify-content-around">
             <div className='position-relative'>
               <img src={require('./assets/icons/search.png')} alt="Search" className='search position-absolute top-50 start-0 offset-1' />
               <input
-                placeholder="Search by name or type"
-                className="py-3 p-5 rounded mx-2 fw-bold w-100"
+                placeholder="Name or type"
+                className="rounded py-3 p-5 mx-2 fw-bold w-100"
                 onChange={(e) => setQuery(e.target.value)}
               />
             </div>
           </div>
-          <div className="h1 fw-bold mx-0 mb-3 d-flex">
-            Pokedex
-          </div>
-
-          {/* {query && filteredPokemon.length === 0 ? (<div className='col-12'> No Pokémon or type found</div>) : ''} */}
           <Pagination pokemons={filteredPokemon} />
         </div>)
       }

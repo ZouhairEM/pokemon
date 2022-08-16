@@ -1,12 +1,12 @@
-// import Pokeball from "../assets/icons/pokeball.svg";
+// import Pokeball from "../assets/icons/pokeball.png";
 
 const PokemonBio = (pokemons) => {
   return (
-    <div className="col-2 mx-1 position-relative">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3 position-relative px-4">
       {/* <img src={Pokeball} width="100%" alt="pokeball" className="position-absolute top-0 start-0 translate-middle" /> */}
-      <div className={`pokemon-bio position-relative shadow rounded px-0 ${pokemons.pokemons.type[0].toLowerCase()}-type`}>
-        <div className="px-2 pt-1">
-          <div className="col-12 top-text d-flex justify-content-between">
+      <div className={`pokemon-bio position-relative shadow rounded pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}>
+        <div className="pt-1">
+          <div className="col-12 top-text d-flex justify-content-around">
             <h3 className="fw-bold text-light">{pokemons.pokemons.type[0]}</h3>
             {pokemons.pokemons.type[1] && <h3 className="fw-bold text-light">{pokemons.pokemons.type[1]}</h3>}
           </div>
@@ -15,8 +15,8 @@ const PokemonBio = (pokemons) => {
               <img
                 src={pokemons.pokemons.img}
                 alt={pokemons.pokemons.name}
-                className="pokemon-image position-absolute"
-                style={{ maxWidth: 100 }}
+                className="pokemon-image position-absolute img-fluid"
+                style={{ maxHeight: 110 }}
               />
             </div>
           </div>

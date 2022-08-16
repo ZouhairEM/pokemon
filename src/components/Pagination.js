@@ -6,7 +6,7 @@ class Pagination extends React.Component {
     super();
     this.state = {
       currentPage: 1,
-      pokemonsPerPage: 15
+      pokemonsPerPage: 12
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -25,6 +25,8 @@ class Pagination extends React.Component {
   handleClick(event) {
     this.setState({ currentPage: +event.currentTarget.id });
     console.log("current index", event.currentTarget.id);
+    // event.currentTarget.id.classList.add("bg-warning");
+    console.log(event.currentTarget.id.classList)
   }
 
   render() {
@@ -52,8 +54,9 @@ class Pagination extends React.Component {
 
     return (
       <div className="row">
-        {currentPokemonsDOM && currentPokemonsDOM === 0 ? <div>nothing to show</div> : ''}
+        {currentPokemonsDOM.length === 0 ? <h2>No Pokémon found</h2> : ''}
         {currentPokemonsDOM}
+        {/* {currentPokemonsDOM && currentPokemonsDOM === 0 ? (<div className="col-12">nothing to show</div>) : } */}
         <div id="page-numbers">
           <div className="d-flex">{pageNumDOM}</div>
         </div>
