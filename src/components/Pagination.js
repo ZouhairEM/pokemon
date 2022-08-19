@@ -53,12 +53,11 @@ class Pagination extends React.Component {
     }
 
     return (
-      <div className="row">
+      <div className="row mx-auto p-0">
         {currentPokemonsDOM.length === 0 ? <h2>No Pokémon found</h2> : ''}
         {currentPokemonsDOM}
-        {/* {currentPokemonsDOM && currentPokemonsDOM === 0 ? (<div className="col-12">nothing to show</div>) : } */}
-        <div id="page-numbers">
-          <div className="d-flex">{pageNumDOM}</div>
+        <div className="page-numbers my-3">
+          <div className="d-flex flex-wrap">{pageNumDOM}</div>
         </div>
       </div>
     );
