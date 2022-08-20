@@ -1,24 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 body {
-  font-family: monospace !important;
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
   margin: 0;
   margin-top: 5vh;
+  overflow-y: scroll;
   min-width: 100%;
 }
 
-
 * {
-  outline: dashed 0.1px;
+  font-family: "Press Start 2P", cursive;
+  /* outline: dashed 0.1px; */
 }
 
+
 :root {
-  font-size: 62.5%;
+  font-size: 65%;
   --black: rgb(31, 31, 31);
   --red: #ff3514;
 }
 
 #root > div {
   max-width: 1000px;
+  min-height: 90vh;
   margin: 2.5em auto;
 }
 
@@ -57,7 +60,6 @@ div.white-card {
 } 
 
 .clear-btn::before {
-  /* <img src={require('./assets/icons/search.png')} alt="Search" className='search position-absolute top-50 start-0 offset-1' /> */
   content: "\00d7";
   position: absolute;
   right: -5px;
@@ -144,21 +146,20 @@ div.white-card {
   background-size: 90%;
 }
 
-img.search {
-  width: 15px;
-  top: 32% !important;
+.input-group{
+  width: 85%!important;
+  overflow: hidden;
 }
 
 input {
-  background: rgb(228, 228, 228);
   border: none;
   outline: none;
-  font-size: 1.5em!important;
+  background: url("../src/assets//icons/search.png") no-repeat left;
+  background-size: 15px;
+  background-position: 5px;
+  padding-left: 3.5em;
 }
 
-.p-7 {
-  padding: 5rem;
-}
 .rounded-hard {
   border-radius: 1.5em;
 }

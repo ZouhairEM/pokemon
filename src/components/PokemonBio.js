@@ -1,19 +1,28 @@
 const PokemonBio = (pokemons) => {
   return (
     <div className="col-6 col-sm-4 col-md-4 col-lg-3 position-relative py-1 px-3">
-      <div className={`pokemon-bio position-relative shadow-sm rounded-hard pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}>
+      <div
+        className={`pokemon-bio position-relative shadow-sm rounded-hard pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}
+      >
         <div className="pt-1">
           <div className="col-12 top-text d-flex justify-content-around">
             <div className="col-6 m-0 p-0">
-              <h3 className="fw-bold text-light">
+              <h5 className="fw-bold text-light">
                 {pokemons.pokemons.type[0]}
-              </h3>
+              </h5>
             </div>
             <div className="col-6 m-0 p-0">
-              {pokemons.pokemons.type[1] && <h3 className="fw-bold text-light">{pokemons.pokemons.type[1]}</h3>}
+              {pokemons.pokemons.type[1] && (
+                <h5 className="fw-bold text-light">
+                  {pokemons.pokemons.type[1]}
+                </h5>
+              )}
             </div>
           </div>
-          <div className="col-12 d-flex flex-column" style={{ height: "100px" }}>
+          <div
+            className="col-12 d-flex flex-column"
+            style={{ height: "100px" }}
+          >
             <div className="col-12 cover d-flex justify-content-center">
               <img
                 src={pokemons.pokemons.img}
@@ -25,14 +34,14 @@ const PokemonBio = (pokemons) => {
           </div>
         </div>
         <div className="white-card bg-white p-2">
-          <h3 className="fw-bold">{pokemons.pokemons.name}</h3>
+          <h5 className="fw-bold">{pokemons.pokemons.name}</h5>
         </div>
       </div>
       <div className="mt-2 mb-3">
-        <h4 className="fw-bold">#{pokemons.pokemons.num}</h4>
+        <h5 className="fw-bold">#{pokemons.pokemons.num}</h5>
       </div>
     </div>
   );
 };
 
-export default PokemonBio;
+export default PokemonBio
