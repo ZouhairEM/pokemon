@@ -15,10 +15,15 @@ function App() {
   const [filtersVisible, setFiltersVisible] = useState(false);
   const [clearVisible, setClearVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClearInput = () => {
+    setQuery(""); 
+    document.querySelector('input').value = "";
+  }
 
   let filteredPokemon = pokemons.filter(({ name }) => {
-    return name.toLowerCase().includes(query.toLowerCase()) ? true : false
+    return name.toLowerCase().includes(query.toLowerCase()) ? true : false;
   });
 
   useEffect(() => {
@@ -28,7 +33,7 @@ function App() {
       }
       setFilterBtns(filterBtns);
     });
-    filterBtns.sort();    
+    filterBtns.sort();
     setIsLoaded(true);
   }, [filterBtns, pokemons]);
 
@@ -38,14 +43,16 @@ function App() {
     });
     setPokemons(filteredByType);
     setClearVisible(true);
-    setIsActive(e)
+    setIsActive(e);
   };
 
   const handleCheckFilter = () => {
     setFiltersVisible(!filtersVisible);
     setPokemons(getPokemon().pokemons);
-    return clearVisible || isActive ? [setIsActive(false), setClearVisible(false)] : ''; 
-  }
+    return clearVisible || isActive
+      ? [setIsActive(false), setClearVisible(false)]
+      : "";
+  };
 
   return (
     <div className="App container shadow">
@@ -57,11 +64,19 @@ function App() {
               <h4 className="text-start">Search for a First Gen Pokémon </h4>
             </div>
             <div className="col-9 offset-1 col-sm-3 offset-sm-0 mt-0 mt-4 py-1 me-4 position-relative">
-              <div className="input-group p-0 m-0">
+              <div className="input-group p-0 m-0 position-relative">
+                <span
+                  className={`input-icon position-absolute ${query !== "" ? "typing" : "not-typing"}`}
+                  onClick={() => { handleClearInput()}}
+                >
+                </span>
                 <input
                   placeholder="Find Pokémon"
                   className="rounded fw-bold py-2"
-                  onChange={(e) => setQuery(e.target.value)}
+                  onChange={(e) => [
+                    setPokemons(getPokemon().pokemons),
+                    setQuery(e.target.value),
+                  ]}
                 />
               </div>
               <div className="position-absolute top-50 start-100 translate-middle">
@@ -86,7 +101,9 @@ function App() {
                     onClick={() => {
                       handleFilter(filterBtn);
                     }}
-                    className={`filter-btn p-3 pb-2 me-3 mb-3 ${isActive === filterBtn ? "active" : ""} ${filterBtn.toLowerCase() }-type`}
+                    className={`filter-btn p-3 pb-2 me-3 mb-3 ${
+                      isActive === filterBtn ? "active" : ""
+                    } ${filterBtn.toLowerCase()}-type`}
                     key={i}
                   >
                     <h5 className="fw-bold text-light">{filterBtn}</h5>
@@ -96,9 +113,9 @@ function App() {
               {clearVisible && (
                 <span
                   onClick={() => {
-                    setPokemons(getPokemon().pokemons)
-                    setClearVisible(false)
-                    setIsActive(false)
+                    setPokemons(getPokemon().pokemons);
+                    setClearVisible(false);
+                    setIsActive(false);
                   }}
                   className="clear-btn p-3 pb-2 ms-3 mb-2"
                 >

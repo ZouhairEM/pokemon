@@ -66,16 +66,16 @@ class Pagination extends React.Component {
 
     return (
       <>
-      <div className="row pokemon-wrapper">
         {currentPokemonsDOM.length === 0 ? (
-          <div className="my-auto">
-            <img src={avatar} alt="avatar" width={200} className="mb-5" />
-            <h2>No Pokémon found</h2>
+          <div className="row pokemon-wrapper flex-column align-items-center">
+            <div className="my-auto">
+              <img src={avatar} alt="avatar" width={200} className="mb-5" />
+              <h2>No Pokémon found</h2>
+            </div>
           </div>
         ) : (
-          ""
+          <div className="row pokemon-wrapper">{currentPokemonsDOM}</div>
         )}
-        {currentPokemonsDOM}</div>
         <span className="page-numbers">
           <h5 className="d-flex flex-wrap p-0 mt-5">{pageNumDOM}</h5>
         </span>
