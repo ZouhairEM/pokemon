@@ -2,7 +2,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 // import SearchBar from './components/SearchBar';
 import Pagination from "./components/Pagination";
-import FilterIcon from "./assets/icons/filter-1.svg";
+import FilterIcon from "./assets/icons/filter.svg";
+import closeIcon from "./assets/icons/close.svg";
 import { getPokemon } from "./services/services";
 import { useState, useEffect } from "react";
 
@@ -40,16 +41,22 @@ function App() {
     setIsActive(e)
   };
 
+  const handleCheckFilter = () => {
+    setFiltersVisible(!filtersVisible);
+    setPokemons(getPokemon().pokemons);
+    return clearVisible || isActive ? [setIsActive(false), setClearVisible(false)] : ''; 
+  }
+
   return (
     <div className="App container shadow">
       {isLoaded && (
-        <div className="mx-auto">
-          <div className="col-12 d-flex align-items-end justify-content-between py-5 px-3">
+        <div className="row mx-auto d-flex flex-column">
+          <div className="row d-flex align-items-end justify-content-between pt-3 pb-5 px-3">
             <div className="col-12 col-sm-6">
               <h1 className="fw-bold text-start">Pokédex</h1>
-              <h4 className="text-start">Search for a Pokémon by name</h4>
+              <h4 className="text-start">Search for a First Gen Pokémon </h4>
             </div>
-            <div className="py-1 me-4 position-relative">
+            <div className="col-9 offset-1 col-sm-3 offset-sm-0 mt-0 mt-4 py-1 me-4 position-relative">
               <div className="input-group p-0 m-0">
                 <input
                   placeholder="Find Pokémon"
@@ -59,13 +66,13 @@ function App() {
               </div>
               <div className="position-absolute top-50 start-100 translate-middle">
                 <button
-                  onClick={() => setFiltersVisible(!filtersVisible)}
+                  onClick={() => handleCheckFilter()}
                   className="filter-btn position-relative p-4"
                 >
                   <img
-                    src={FilterIcon}
+                    src={`${filtersVisible ? closeIcon : FilterIcon}`}
                     alt="Filter"
-                    className="position-absolute top-50 start-50 translate-middle w-75"
+                    className="filter-img position-absolute top-50 start-50 translate-middle w-75"
                   />
                 </button>
               </div>

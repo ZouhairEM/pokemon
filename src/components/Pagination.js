@@ -1,5 +1,6 @@
 import React from "react";
 import PokemonBio from "./PokemonBio";
+import avatar from "../assets/icons/missing.svg";
 
 class Pagination extends React.Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Pagination extends React.Component {
     this.state = {
       currentPage: 1,
       pokemonsPerPage: 12,
-      isActive: "0"
+      isActive: 1,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -24,9 +25,9 @@ class Pagination extends React.Component {
   }
 
   handleClick(event) {
-    this.setState({ 
+    this.setState({
       currentPage: +event.currentTarget.id,
-      isActive: +event.currentTarget.id
+      isActive: +event.currentTarget.id,
     });
   }
 
@@ -43,7 +44,13 @@ class Pagination extends React.Component {
       for (let i = 1; i <= maxPage; i++) {
         pageNumDOM.push(
           <li key={i} id={i} onClick={this.handleClick}>
-            <h5 className={`page-number mx-2 fw-bold ${isActive === i ? "active" : ""}`}>{i}</h5>
+            <h5
+              className={`page-number mx-2 fw-bold ${
+                isActive === i ? "active" : ""
+              }`}
+            >
+              {i}
+            </h5>
           </li>
         );
       }
@@ -58,19 +65,21 @@ class Pagination extends React.Component {
     }
 
     return (
-      <div className="row mx-auto p-0">
+      <>
+      <div className="row pokemon-wrapper">
         {currentPokemonsDOM.length === 0 ? (
-          <div className="p-5 my-auto mt-5">
+          <div className="my-auto">
+            <img src={avatar} alt="avatar" width={200} className="mb-5" />
             <h2>No Pokémon found</h2>
           </div>
         ) : (
           ""
         )}
-        {currentPokemonsDOM}
-        <span className="page-numbers my-3">
-          <h5 className="d-flex flex-wrap">{pageNumDOM}</h5>
+        {currentPokemonsDOM}</div>
+        <span className="page-numbers">
+          <h5 className="d-flex flex-wrap p-0 mt-5">{pageNumDOM}</h5>
         </span>
-      </div>
+      </>
     );
   }
 }

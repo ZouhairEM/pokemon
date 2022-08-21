@@ -1,8 +1,8 @@
 const PokemonBio = (pokemons) => {
   return (
-    <div className="col-6 col-sm-4 col-md-4 col-lg-3 position-relative py-1 px-3">
+    <div className="pokemon-bio col-6 col-sm-4 col-md-4 col-lg-3 position-relative py-1 px-3">
       <div
-        className={`pokemon-bio position-relative rounded-hard shadow-sm pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}
+        className={`position-relative rounded-hard shadow-sm pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}
       >
         <div className="pt-1">
           <div className="col-12 top-text d-flex justify-content-around">
