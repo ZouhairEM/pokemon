@@ -6,7 +6,8 @@ class Pagination extends React.Component {
     super();
     this.state = {
       currentPage: 1,
-      pokemonsPerPage: 12
+      pokemonsPerPage: 12,
+      isActive: "0"
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -23,14 +24,14 @@ class Pagination extends React.Component {
   }
 
   handleClick(event) {
-    this.setState({ currentPage: +event.currentTarget.id });
-    console.log("current index", event.currentTarget.id);
-    // event.currentTarget.id.classList.add("bg-warning");
-    console.log(event.currentTarget.id.classList)
+    this.setState({ 
+      currentPage: +event.currentTarget.id,
+      isActive: +event.currentTarget.id
+    });
   }
 
   render() {
-    const { currentPage, pokemonsPerPage } = this.state;
+    const { currentPage, pokemonsPerPage, isActive } = this.state;
     const pokemonLastIndex = currentPage * pokemonsPerPage;
     const pokemonIndex = pokemonLastIndex - pokemonsPerPage;
     const maxPage = Math.ceil(this.props.pokemons.length / pokemonsPerPage);
@@ -38,23 +39,33 @@ class Pagination extends React.Component {
     const pageNumDOM = [];
     const currentPokemonsDOM = [];
 
-    for (let i = 1; i <= maxPage; i++) {
-      pageNumDOM.push(
-        <li key={i} id={i} onClick={this.handleClick}>
-          <h5 className="page-number mx-2 fw-bold">{i}</h5>
-        </li>
-      );
+    if (maxPage > 1) {
+      for (let i = 1; i <= maxPage; i++) {
+        pageNumDOM.push(
+          <li key={i} id={i} onClick={this.handleClick}>
+            <h5 className={`page-number mx-2 fw-bold ${isActive === i ? "active" : ""}`}>{i}</h5>
+          </li>
+        );
+      }
     }
 
     for (let i = pokemonIndex; i < currentPage * pokemonsPerPage; i++) {
       const pokemonBio = this.props.pokemons[i];
       if (!pokemonBio) break;
-      currentPokemonsDOM.push(<PokemonBio key={pokemonBio.id} pokemons={pokemonBio} />);
+      currentPokemonsDOM.push(
+        <PokemonBio key={pokemonBio.id} pokemons={pokemonBio} />
+      );
     }
 
     return (
       <div className="row mx-auto p-0">
-        {currentPokemonsDOM.length === 0 ? <div className="p-5 my-auto mt-5"><h2>No Pokémon found</h2></div> : ''}
+        {currentPokemonsDOM.length === 0 ? (
+          <div className="p-5 my-auto mt-5">
+            <h2>No Pokémon found</h2>
+          </div>
+        ) : (
+          ""
+        )}
         {currentPokemonsDOM}
         <span className="page-numbers my-3">
           <h5 className="d-flex flex-wrap">{pageNumDOM}</h5>

@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 body {
-  background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
   margin: 0;
   margin-top: 5vh;
   overflow-y: scroll;
@@ -12,7 +16,6 @@ body {
   /* outline: dashed 0.1px; */
 }
 
-
 :root {
   font-size: 65%;
   --black: rgb(31, 31, 31);
@@ -23,6 +26,11 @@ body {
   max-width: 1000px;
   min-height: 90vh;
   margin: 2.5em auto;
+}
+
+.active {
+  background-color: var(--red)!important;
+  color: white;
 }
 
 #root > div > div {
@@ -38,17 +46,12 @@ div.white-card {
   cursor: pointer;
 }
 
-
 .filter-btn {
   text-shadow: 2px 2px var(--black);
-  box-shadow: 2px 2px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.4em;
   border: none;
-  background-color: var(--red)
-}
-
-.red-btn {
-  background-color: var(--red)
+  background-color: var(--red);
 }
 
 .clear-btn {
@@ -57,13 +60,13 @@ div.white-card {
   font-size: 2em;
   font-weight: bold;
   cursor: pointer;
-} 
+}
 
 .clear-btn::before {
   content: "\00d7";
   position: absolute;
-  right: -5px;
-  top: -3px;
+  right: -0.5em;
+  top: 0;
 }
 
 .grass-type {
@@ -94,13 +97,11 @@ div.white-card {
 .normal-type {
   background: #c9c98c;
   background: -moz-linear-gradient(top, #c9c98c 28%, #d3d3a3 77%);
-
 }
 
 .electric-type {
   background: #edcd2f;
   background: -moz-linear-gradient(top, #edcd2f 28%, #f0d758 77%);
-
 }
 
 .ground-type {
@@ -121,7 +122,6 @@ div.white-card {
 .rock-type {
   background: #807027;
   background: -moz-linear-gradient(top, #807027 28%, #93802c 77%);
-
 }
 
 .ice-type {
@@ -140,21 +140,21 @@ div.white-card {
 }
 
 .background {
-  background-image: url('../src/assets//icons/pokeball.svg');
+  background-image: url("../src/assets//icons/pokeball.svg");
   background-position: 15vh;
   background-repeat: no-repeat;
   background-size: 90%;
 }
 
-.input-group{
-  width: 85%!important;
+.input-group {
+  width: 85% !important;
   overflow: hidden;
 }
 
 input {
   border: none;
   outline: none;
-  background: url("../src/assets//icons/search.png") no-repeat left;
+  background: url("../src/assets//icons/search.svg") no-repeat left;
   background-size: 15px;
   background-position: 5px;
   padding-left: 3.5em;
@@ -177,7 +177,11 @@ input {
 
 .pokemon-image {
   top: 25%;
-  max-width: 100px!important;
+  max-width: 100px !important;
+}
+
+.pokemon-bio:hover > div > div > div > img {
+  animation: jump 0.5s linear alternate infinite;
 }
 
 @keyframes jump {
@@ -192,8 +196,4 @@ input {
   100% {
     transform: translate3d(0, 10px, 0) scale3d(1.05, 1.05, 1);
   }
-}
-
-.pokemon-bio:hover > div > div > div > img{
-  animation: jump 0.5s linear alternate infinite;
 }
