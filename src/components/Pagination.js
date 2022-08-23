@@ -43,7 +43,7 @@ class Pagination extends React.Component {
     if (maxPage > 1) {
       for (let i = 1; i <= maxPage; i++) {
         pageNumDOM.push(
-          <li key={i} id={i} onClick={this.handleClick}>
+          <li key={i} id={i} className="p-2 py-1" onClick={this.handleClick}>
             <h5
               className={`page-number mx-2 fw-bold ${
                 isActive === i ? "active" : ""
@@ -74,7 +74,11 @@ class Pagination extends React.Component {
             </div>
           </div>
         ) : (
-          <div className="row pokemon-wrapper">{currentPokemonsDOM}</div>
+          <div className="pokemon-wrapper d-flex align-items-center">
+            <div className="row">
+            {currentPokemonsDOM}
+            </div>
+          </div>
         )}
         <span className="page-numbers">
           <h5 className="d-flex flex-wrap p-0 mt-5">{pageNumDOM}</h5>

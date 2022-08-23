@@ -7,13 +7,13 @@ const PokemonBio = (pokemons) => {
         <div className="pt-1">
           <div className="col-12 top-text d-flex justify-content-around">
             <div className="col-6 m-0 p-0">
-              <h5 className="fw-bold text-light">
+              <h5 className="fw-bold text-light pt-2">
                 {pokemons.pokemons.type[0]}
               </h5>
             </div>
             <div className="col-6 m-0 p-0">
               {pokemons.pokemons.type[1] && (
-                <h5 className="fw-bold text-light">
+                <h5 className="fw-bold text-light pt-2">
                   {pokemons.pokemons.type[1]}
                 </h5>
               )}
@@ -37,7 +37,7 @@ const PokemonBio = (pokemons) => {
           <h5 className="fw-bold">{pokemons.pokemons.name}</h5>
         </div>
       </div>
-      <div className="mt-2 mb-3">
+      <div className="mt-2 mb-4">
         <h5 className="fw-bold">#{pokemons.pokemons.num}</h5>
       </div>
     </div>

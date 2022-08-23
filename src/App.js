@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Pagination from "./components/Pagination";
 import FilterIcon from "./assets/icons/filter.svg";
 import closeIcon from "./assets/icons/close.svg";
+import pokemonLogo from "./assets/icons/pokemon-logo.png";
 import { getPokemon } from "./services/services";
 import { useState, useEffect } from "react";
 
@@ -18,9 +19,9 @@ function App() {
   const [isActive, setIsActive] = useState(false);
 
   const handleClearInput = () => {
-    setQuery(""); 
-    document.querySelector('input').value = "";
-  }
+    setQuery("");
+    document.querySelector("input").value = "";
+  };
 
   let filteredPokemon = pokemons.filter(({ name }) => {
     return name.toLowerCase().includes(query.toLowerCase()) ? true : false;
@@ -55,41 +56,53 @@ function App() {
   };
 
   return (
-    <div className="App container shadow">
+    <div className="App container">
       {isLoaded && (
         <div className="row mx-auto d-flex flex-column">
-          <div className="row d-flex align-items-end justify-content-between pt-3 pb-5 px-3">
+          <div className="col-12 d-flex align-items-start justify-content-between pt-3 pb-5 px-3">
             <div className="col-12 col-sm-6">
-              <h1 className="fw-bold text-start">Pokédex</h1>
-              <h4 className="text-start">Search for a First Gen Pokémon </h4>
+              <h1 className="fw-bold mb-3 p-3 text-white pokemon-logo"><img src={pokemonLogo} className="pokemon-logo" width={100} alt={pokemonLogo} /></h1>
             </div>
-            <div className="col-9 offset-1 col-sm-3 offset-sm-0 mt-0 mt-4 py-1 me-4 position-relative">
-              <div className="input-group p-0 m-0 position-relative">
-                <span
-                  className={`input-icon position-absolute ${query !== "" ? "typing" : "not-typing"}`}
-                  onClick={() => { handleClearInput()}}
-                >
-                </span>
+            <div className="col-12 col-sm-4 position-relative">
+              <h5 className="text-left pb-3">Search for Pokémon </h5>
+              <div className="d-flex input-group p-1 m-0 justify-content-center">
                 <input
-                  placeholder="Find Pokémon"
-                  className="rounded fw-bold py-2"
+                  placeholder="Name"
+                  className="rounded fw-bold py-2 position-relative"
+                  maxLength="16"
                   onChange={(e) => [
                     setPokemons(getPokemon().pokemons),
                     setQuery(e.target.value),
                   ]}
                 />
+                <span
+                  className={`input-icon position-absolute ${
+                    query !== "" ? "typing" : "not-typing"
+                  }`}
+                  onClick={() => {
+                    handleClearInput();
+                  }}
+                ></span>
+                <div className="filter-group position-absolute top-50 translate-middle">
+                  <button
+                    onClick={() => handleCheckFilter()}
+                    className="filter-btn position-relative p-4"
+                  >
+                    <img
+                      src={`${filtersVisible ? closeIcon : FilterIcon}`}
+                      alt="Filter"
+                      className="filter-img position-absolute top-50 start-50 translate-middle w-75"
+                    />
+                  </button>
+                </div>
               </div>
-              <div className="position-absolute top-50 start-100 translate-middle">
-                <button
-                  onClick={() => handleCheckFilter()}
-                  className="filter-btn position-relative p-4"
-                >
-                  <img
-                    src={`${filtersVisible ? closeIcon : FilterIcon}`}
-                    alt="Filter"
-                    className="filter-img position-absolute top-50 start-50 translate-middle w-75"
-                  />
-                </button>
+            </div>
+            <div className="col-12 col-sm-2 d-flex test justify-content-center">
+              <div className="wrapper w-100 d-flex align-items-start justify-content-end bulbs">
+                <span className="bulb-blue align-self-center mx-4"></span>
+                <span className="bulb mx-2"></span>
+                <span className="bulb mx-2 me-3"></span>
+                <span className="bulb"></span>
               </div>
             </div>
           </div>
@@ -119,7 +132,7 @@ function App() {
                   }}
                   className="clear-btn p-3 pb-2 ms-3 mb-2"
                 >
-                  <h4 className="fw-bold">Clear</h4>
+                  <h5 className="fw-bold">Clear</h5>
                 </span>
               )}
             </div>
