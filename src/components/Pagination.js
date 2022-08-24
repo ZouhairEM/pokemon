@@ -68,7 +68,7 @@ class Pagination extends React.Component {
       <>
         {currentPokemonsDOM.length === 0 ? (
           <div className="row pokemon-wrapper flex-column align-items-center">
-            <div className="my-auto">
+            <div>
               <img src={avatar} alt="avatar" width={200} className="mb-5" />
               <h2>No Pokémon found</h2>
             </div>

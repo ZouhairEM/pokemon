@@ -22,11 +22,9 @@ h1 {
 
 #root > div {
   max-width: 1000px;
-  /* min-height: 90vh; */
   margin: 2.5em auto;
   box-shadow: 3px 3px #a89b9b;
   border: solid 3px black;
-  padding: 0.5em 1em;
 }
 
 .active,
@@ -201,7 +199,7 @@ img.filter-img {
 }
 
 .bulb-blue {
-  outline: solid 1px;
+  border: solid 2px;
   width: 35px;
   height: 35px;
   background-color: #7f9dd0;
@@ -209,32 +207,27 @@ img.filter-img {
 }
 
 .bulb{
-  outline: solid 1px;
+  border: solid 2px;
   width: 20px;
   height: 20px;
-  background-color: red;
   border-radius: 5px;
 }
 
-.bulb:nth-child(2){
-  background-color: #cb1f20;
+.bulb:nth-child(1){
+  background-color: var(--red);
 }
 
-.bulb:nth-child(3){
+.bulb:nth-child(2){
   background-color: #fee261;
 }
 
-.bulb:nth-child(4){
+.bulb:nth-child(3){
   background-color: #84c263;
 }
 
 .page-numbers {
   list-style: none;
   cursor: pointer;
-}
-
-span.page-numbers > h5 > li {
-  background: var(--grey);
 }
 
 .page-number:hover {
@@ -250,6 +243,9 @@ span.page-numbers > h5 > li {
 
 .pokemon-logo {
   background: var(--red);
+  box-shadow: 3px 3px #a89b9b;
+  border: solid 2px black; 
+  height: 56px;
 }
 
 .pokemon-bio:hover > div > div > div > div > img {

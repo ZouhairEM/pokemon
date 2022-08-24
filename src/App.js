@@ -58,13 +58,13 @@ function App() {
   return (
     <div className="App container">
       {isLoaded && (
-        <div className="row mx-auto d-flex flex-column">
+        <div className="row mx-auto d-flex flex-column p-3 py-4">
           <div className="col-12 d-flex align-items-start justify-content-between pt-3 pb-5 px-3">
-            <div className="col-12 col-sm-6">
-              <h1 className="fw-bold mb-3 p-3 text-white pokemon-logo"><img src={pokemonLogo} className="pokemon-logo" width={100} alt={pokemonLogo} /></h1>
+            <div className="col-12 col-sm-6 pokemon-logo">
+              <h1 className="fw-bold mb-3 p-2 text-white"><img src={pokemonLogo} width={120} alt={pokemonLogo} /></h1>
             </div>
             <div className="col-12 col-sm-4 position-relative">
-              <h5 className="text-left pb-3">Search for Pokémon </h5>
+              <h5 className="text-left pb-4">Search for Pokémon</h5>
               <div className="d-flex input-group p-1 m-0 justify-content-center">
                 <input
                   placeholder="Name"
@@ -99,7 +99,6 @@ function App() {
             </div>
             <div className="col-12 col-sm-2 d-flex test justify-content-center">
               <div className="wrapper w-100 d-flex align-items-start justify-content-end bulbs">
-                <span className="bulb-blue align-self-center mx-4"></span>
                 <span className="bulb mx-2"></span>
                 <span className="bulb mx-2 me-3"></span>
                 <span className="bulb"></span>
