@@ -16,7 +16,7 @@ h1 {
 :root {
   font-size: 50%;
   --black: rgb(31, 31, 31);
-  --red: #ff3514;
+  --red: #fa5c42;
   --grey: #ededed;
 }
 
@@ -59,7 +59,7 @@ div.white-card {
 }
 
 .filter-group {
-  right: 0%;
+  right: 3.4%;
 }
 
 .filter-btn {
@@ -91,8 +91,8 @@ div.white-card {
 }
 
 .fire-type {
-  background: #ff8b78;
-  background: -moz-linear-gradient(top, #ff8b78 26%, #ff8b78 77%);
+  background: #fa5c42;
+  background: -moz-linear-gradient(top, #fa5c42 26%, #fa5c42 77%);
 }
 
 .water-type {
@@ -163,6 +163,7 @@ div.white-card {
 }
 
 .input-group {
+  width: 80%!important;
   overflow: hidden;
 }
 
@@ -175,7 +176,7 @@ input {
   height: 12px;
   cursor: pointer;
   top: 8px;
-  left: 22%;
+  left: 7%;
   background-size: 20px;
   background-position: 5px;
   padding-left: 3.5em;
@@ -195,34 +196,34 @@ img.filter-img {
 }
 
 .rounded-hard {
-  /* border-radius: 1.5em; */
+  border-radius: 1.5em;
 }
 
-.bulb-blue {
+.big-bulb {
   border: solid 2px;
-  width: 35px;
-  height: 35px;
-  background-color: #7f9dd0;
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background-color: #8eadd1;
 }
 
 .bulb{
   border: solid 2px;
   width: 20px;
   height: 20px;
-  border-radius: 5px;
-}
-
-.bulb:nth-child(1){
-  background-color: var(--red);
+  border-radius: 8px;
 }
 
 .bulb:nth-child(2){
-  background-color: #fee261;
+  background-color: var(--red);
 }
 
 .bulb:nth-child(3){
-  background-color: #84c263;
+  background-color: #fee261;
+}
+
+.bulb:nth-child(4){
+  background-color: #7c9f74;
 }
 
 .page-numbers {
@@ -236,8 +237,8 @@ img.filter-img {
 }
 
 .pokemon-image {
-  top: 25%;
-  max-width: 100px !important;
+  top: 17%;
+  max-width: 110px !important;
   user-select: none;
 }
 
@@ -245,7 +246,20 @@ img.filter-img {
   background: var(--red);
   box-shadow: 3px 3px #a89b9b;
   border: solid 2px black; 
-  height: 56px;
+  height: 55px;
+}
+
+.white-spot {
+  height: 10px;
+  width: 10px;
+  left: 5px;
+  top: 2px;
+  background: white;
+  z-index: 0;
+}
+
+.min-vh-70{
+  min-height: 70vh!important;
 }
 
 .pokemon-bio:hover > div > div > div > div > img {

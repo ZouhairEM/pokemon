@@ -14,7 +14,6 @@ class Pagination extends React.Component {
   }
 
   componentDidUpdate() {
-    // capping/limitting currentPage if it exceeds above maxPage to maxpage
     if (this.state.currentPage > 1) {
       const maxPage = Math.ceil(
         this.props.pokemons.length / this.state.pokemonsPerPage
@@ -45,7 +44,7 @@ class Pagination extends React.Component {
         pageNumDOM.push(
           <li key={i} id={i} className="p-2 py-1" onClick={this.handleClick}>
             <h5
-              className={`page-number mx-2 fw-bold ${
+              className={`page-number p-2 mx-2 fw-bold ${
                 isActive === i ? "active" : ""
               }`}
             >
@@ -67,21 +66,21 @@ class Pagination extends React.Component {
     return (
       <>
         {currentPokemonsDOM.length === 0 ? (
-          <div className="row pokemon-wrapper flex-column align-items-center">
+          <div className="row pokemon-wrapper justify-content-center">
             <div>
               <img src={avatar} alt="avatar" width={200} className="mb-5" />
               <h2>No Pokémon found</h2>
             </div>
           </div>
         ) : (
-          <div className="pokemon-wrapper d-flex align-items-center">
-            <div className="row">
+          <div className="pokemon-wrapper d-flex align-items-center mt-3 mt-sm-0">
+            <div className="row w-100 min-vh-70">
             {currentPokemonsDOM}
             </div>
           </div>
         )}
         <span className="page-numbers">
-          <h5 className="d-flex flex-wrap p-0 mt-5">{pageNumDOM}</h5>
+          <h5 className="d-flex flex-wrap mt-5">{pageNumDOM}</h5>
         </span>
       </>
     );
