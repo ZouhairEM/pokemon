@@ -39,7 +39,7 @@ h1 {
 }
 
 #root > div > div {
-  min-height: 50vh;
+  /* min-height: 50vh; */
 }
 
 .pokemon-wrapper {
@@ -68,6 +68,10 @@ div.white-card {
   border-radius: 0.4em;
   border: none;
   background-color: var(--red);
+}
+
+.type {
+  text-shadow: 2px 2px var(--black);
 }
 
 .clear-btn {
@@ -110,7 +114,7 @@ div.white-card {
   background: -moz-linear-gradient(top, #b2bf45 26%, #c1cb6a 77%);
 }
 
-.normal-type {
+.normal-type, .flying-type {
   background: #c9c98c;
   background: -moz-linear-gradient(top, #c9c98c 28%, #d3d3a3 77%);
 }
@@ -259,7 +263,7 @@ img.filter-img {
 }
 
 .min-vh-70{
-  min-height: 70vh!important;
+  /* min-height: 70vh!important; */
 }
 
 .pokemon-bio:hover > div > div > div > div > img {
