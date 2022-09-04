@@ -38,16 +38,11 @@ h1 {
   box-shadow: none !important;
 }
 
-#root > div > div {
-  /* min-height: 50vh; */
-}
-
 .pokemon-wrapper {
-  min-height: 70vh;
   place-content: flex-start;
 }
 
-div.white-card {
+.white-card {
   border-top-left-radius: 1.5em !important;
   border-top-right-radius: 1.5em !important;
   box-shadow: 0px -1px black;
@@ -114,7 +109,8 @@ div.white-card {
   background: -moz-linear-gradient(top, #b2bf45 26%, #c1cb6a 77%);
 }
 
-.normal-type, .flying-type {
+.normal-type,
+.flying-type {
   background: #c9c98c;
   background: -moz-linear-gradient(top, #c9c98c 28%, #d3d3a3 77%);
 }
@@ -167,7 +163,7 @@ div.white-card {
 }
 
 .input-group {
-  width: 80%!important;
+  width: 80% !important;
   overflow: hidden;
 }
 
@@ -211,22 +207,22 @@ img.filter-img {
   background-color: #8eadd1;
 }
 
-.bulb{
+.bulb {
   border: solid 2px;
   width: 20px;
   height: 20px;
   border-radius: 8px;
 }
 
-.bulb:nth-child(2){
+.bulb:nth-child(2) {
   background-color: var(--red);
 }
 
-.bulb:nth-child(3){
+.bulb:nth-child(3) {
   background-color: #fee261;
 }
 
-.bulb:nth-child(4){
+.bulb:nth-child(4) {
   background-color: #7c9f74;
 }
 
@@ -249,7 +245,7 @@ img.filter-img {
 .pokemon-logo {
   background: var(--red);
   box-shadow: 3px 3px #a89b9b;
-  border: solid 2px black; 
+  border: solid 2px black;
   height: 55px;
 }
 
@@ -262,11 +258,7 @@ img.filter-img {
   z-index: 0;
 }
 
-.min-vh-70{
-  /* min-height: 70vh!important; */
-}
-
-.pokemon-bio:hover > div > div > div > div > img {
+.pokemon-bio:hover > a > div > div > div > div > img {
   animation: jump 0.5s linear alternate infinite;
 }
 

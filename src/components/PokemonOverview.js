@@ -2,7 +2,7 @@ import React from "react";
 import PokemonBio from "./PokemonBio";
 import avatar from "../assets/icons/missing.svg";
 
-class Pagination extends React.Component {
+class PokemonOverview extends React.Component {
   constructor(props) {
     super();
     this.state = {
@@ -74,17 +74,15 @@ class Pagination extends React.Component {
           </div>
         ) : (
           <div className="pokemon-wrapper d-flex align-items-center mt-3 mt-sm-0">
-            <div className="row w-100 min-vh-70">
-            {currentPokemonsDOM}
-            </div>
+            <div className="row w-100 min-vh-70">{currentPokemonsDOM}</div>
           </div>
         )}
         <span className="page-numbers">
-          <h5 className="d-flex flex-wrap mt-5">{pageNumDOM}</h5>
+          <h5 className="d-flex flex-wrap mt-2">{pageNumDOM}</h5>
         </span>
       </>
     );
   }
 }
 
-export default Pagination;
+export default PokemonOverview;

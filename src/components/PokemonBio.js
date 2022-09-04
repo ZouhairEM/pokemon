@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const PokemonBio = (pokemons) => {
   return (
     <div className="pokemon-bio col-9 mx-auto mx-sm-0 col-sm-6 col-md-4 col-lg-3 position-relative py-1 px-3">
-      <Link to={`/${pokemons.pokemons.name.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+      <Link to={`/${pokemons.pokemons.name.toLowerCase()}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
         <div
           className={`position-relative rounded-hard shadow-sm pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}
         >
