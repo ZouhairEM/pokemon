@@ -20,8 +20,14 @@ h1 {
   --grey: #ededed;
 }
 
+#root {
+  min-height: 100vh;
+  padding: 4em;
+  /* display: flex; */
+}
+
 #root > div {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 2.5em auto;
   box-shadow: 3px 3px #a89b9b;
   border: solid 3px black;
@@ -57,12 +63,20 @@ h1 {
   right: 3.4%;
 }
 
+.arrow-left:hover {
+  scale: 1.15;
+}
+
 .filter-btn {
   text-shadow: 2px 2px var(--black);
   box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 0.4em;
   border: none;
   background-color: var(--red);
+}
+
+.filter-btn:hover > h5{
+  scale: 1.05;
 }
 
 .type {
@@ -91,7 +105,7 @@ h1 {
 
 .fire-type {
   background: #fa5c42;
-  background: -moz-linear-gradient(top, #fa5c42 26%, #fa5c42 77%);
+  background: -moz-linear-gradient(top, #e9e7e6 26%, #000000 77%);
 }
 
 .water-type {
@@ -155,6 +169,11 @@ h1 {
   background: -moz-linear-gradient(top, #644f88 28%, #594679 77%);
 }
 
+.dark-type {
+  background: #2f2148;
+  background: -moz-linear-gradient(top, #2f2148 28%, #594679 77%);
+}
+
 .background {
   background-image: url("../src/assets//icons/pokeball.svg");
   background-position: 15vh;
@@ -172,11 +191,16 @@ input {
   cursor: auto;
 }
 
+input:focus {
+  outline: none;
+  border: 2px solid var(--red);
+}
+
 .input-icon {
-  height: 12px;
+  height: 14px;
   cursor: pointer;
-  top: 8px;
-  left: 7%;
+  top: 7px;
+  left: 5%;
   background-size: 20px;
   background-position: 5px;
   padding-left: 3.5em;
@@ -200,7 +224,6 @@ img.filter-img {
 }
 
 .big-bulb {
-  border: solid 2px;
   width: 40px;
   height: 40px;
   border-radius: 14px;
@@ -208,7 +231,6 @@ img.filter-img {
 }
 
 .bulb {
-  border: solid 2px;
   width: 20px;
   height: 20px;
   border-radius: 8px;
@@ -219,10 +241,6 @@ img.filter-img {
 }
 
 .bulb:nth-child(3) {
-  background-color: #fee261;
-}
-
-.bulb:nth-child(4) {
   background-color: #7c9f74;
 }
 
@@ -245,10 +263,14 @@ img.filter-img {
 .pokemon-logo {
   background: var(--red);
   box-shadow: 3px 3px #a89b9b;
-  border: solid 2px black;
   height: 55px;
 }
 
+.pokemon-logo:hover > a > img {
+  transition: all 0.2s;
+  scale: 1.02;
+  margin-left: 0.2%;
+}
 .white-spot {
   height: 10px;
   width: 10px;
@@ -259,19 +281,29 @@ img.filter-img {
 }
 
 .pokemon-bio:hover > a > div > div > div > div > img {
-  animation: jump 0.5s linear alternate infinite;
+  animation: jump 1.2s infinite;
 }
 
 @keyframes jump {
   0% {
-    transform: translate3d(0, 10px, 0) scale3d(1, 0.95, 1);
+    transform: translate(-5%, -3%) scale(1.15, 0.95);
   }
-
   50% {
-    transform: translate3d(0, 0px, 0) scale3d(1.03, 1.03, 1);
+    transform: translate(-5%, -5%) scale(1, 1);
   }
-
+  55% {
+    transform: translate(-5%, -5%) rotate(15deg);
+  }
+  60% {
+    transform: translate(-5%, -5%) rotate(-15deg);
+  }
+  65% {
+    transform: translate(-5%, -5%) rotate(15deg);
+  }
+  70% {
+    transform: translate(-5%, -5%) rotate(-15deg);
+  }
   100% {
-    transform: translate3d(0, 10px, 0) scale3d(1.05, 1.05, 1);
+    transform: translate(-5%, -5%) scale(1.15, 0.95);
   }
 }

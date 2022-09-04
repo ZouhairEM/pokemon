@@ -44,7 +44,7 @@ class PokemonOverview extends React.Component {
         pageNumDOM.push(
           <li key={i} id={i} className="p-2 py-1" onClick={this.handleClick}>
             <h5
-              className={`page-number p-2 mx-2 fw-bold ${
+              className={`page-number p-2 mx-1 fw-bold ${
                 isActive === i ? "active" : ""
               }`}
             >
@@ -74,7 +74,7 @@ class PokemonOverview extends React.Component {
           </div>
         ) : (
           <div className="pokemon-wrapper d-flex align-items-center mt-3 mt-sm-0">
-            <div className="row w-100 min-vh-70">{currentPokemonsDOM}</div>
+            <div className="row w-100">{currentPokemonsDOM}</div>
           </div>
         )}
         <span className="page-numbers">

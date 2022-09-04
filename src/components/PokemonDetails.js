@@ -1,4 +1,3 @@
-import Header from "./Header";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -6,7 +5,7 @@ import { getPokemon } from "../services/services";
 import Arrow from "../assets/icons/arrow.svg";
 
 const PokemonDetails = () => {
-  const [pokemons, setPokemons] = useState(getPokemon().pokemons);
+  const [pokemons] = useState(getPokemon().pokemons);
   const [pokemon, setPokemon] = useState(getPokemon().pokemons);
   const [evolved, setEvolved] = useState([]);
 
@@ -27,12 +26,19 @@ const PokemonDetails = () => {
       );
       setEvolved(filteredResults);
     }
-  }, [evolutions, id]);
+  }, [pokemons, evolutions, id]);
 
   return (
     <>
       <div>
-        <h1 className="text-center pb-2">{pokemon[0].name}</h1>
+        <div>
+          <div className="position-relative">
+            <h1 className="text-center pb-2">{pokemon[0].name}</h1>
+            <Link to={'/'}>
+              <img src={Arrow} alt="arrow" width={40} className="position-absolute top-0 arrow-left" style={{ left: '0%', transform: 'scaleX(-1)' }} />
+            </Link>
+          </div>
+        </div>
         <div
           className={`col-12 ${pokemon[0].type[0].toLowerCase()}-type background d-flex justify-content-center`}
         >
@@ -43,20 +49,20 @@ const PokemonDetails = () => {
             style={{ height: "150px" }}
           />
         </div>
-        <div className="d-flex justify-content-between p-0 my-3">
-          <h2 className="fw-bold">#{pokemon[0].num}</h2>
+        <div className="d-flex justify-content-between p-0 my-4">
+          <h2 className="fw-bold d-flex align-items-center">#{pokemon[0].num}</h2>
           <div className="d-flex">
-            <h2
+            <h3
               className={`${pokemon[0].type[0].toLowerCase()}-type p-3 rounded-4 text-white type`}
             >
               {pokemon[0].type[0]}
-            </h2>
+            </h3>
             {pokemon[0].type[1] && (
-              <h2
+              <h3
                 className={`${pokemon[0].type[1].toLowerCase()}-type type p-3 rounded-4 text-white ms-3`}
               >
                 {pokemon[0].type[1]}
-              </h2>
+              </h3>
             )}
           </div>
         </div>
@@ -66,20 +72,20 @@ const PokemonDetails = () => {
           veritatis odit, ab voluptatibus assumenda quidem perspiciatis officiis
           repellendus est.
         </h5>
-        <h2 className="py-5 text-start">Weaknesses</h2>
-        <div className="d-flex">
+        <h2 className="py-4 text-start">Weaknesses</h2>
+        <div className="d-flex flex-wrap">
           {pokemon[0].weaknesses.map((el, i) => {
             return (
-              <h3
+              <h5
                 key={i}
                 className={`${el.toLowerCase()}-type rounded-4 p-3 text-white type me-5`}
               >
                 {el}
-              </h3>
+              </h5>
             );
           })}
         </div>
-        <h2 className="py-5 text-start">Evolutions</h2>
+        <h2 className="py-4 text-start">Evolutions</h2>
         <div className="col d-flex align-items-center">
           {pokemon[0].num < evolved.map((el) => el.num) ? (
             <div className="d-flex flex-column align-items-center h-100">
@@ -87,9 +93,9 @@ const PokemonDetails = () => {
                 src={pokemon[0].img}
                 alt={pokemon[0].name}
                 className="img-fluid mb-2"
-                width={100}
+                width={75}
               />
-              <h4>{pokemon[0].name}</h4>
+              <h4 style={{color: '#fa5c42'}}>{pokemon[0].name}</h4>
             </div>
           ) : (
             ""
@@ -113,7 +119,7 @@ const PokemonDetails = () => {
                         src={el.img}
                         alt={el.name}
                         className="img-fluid"
-                        width={100}
+                        width={75}
                       />
                       <h4 className="text-center mt-2">{el.name}</h4>
                     </div>
@@ -141,9 +147,9 @@ const PokemonDetails = () => {
                   src={pokemon[0].img}
                   alt={pokemon[0].name}
                   className="img-fluid"
-                  width={100}
+                  width={75}
                 />
-                <h4 className="mt-2">{pokemon[0].name}</h4>
+                <h4 className="mt-2" style={{ color: '#fa5c42' }}>{pokemon[0].name}</h4>
               </div>
             </div>
           ) : (
