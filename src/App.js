@@ -75,7 +75,7 @@ function App() {
       {isLoaded && (
         <main>
           <div className="row mx-auto d-flex flex-column p-3 py-4">
-            <HashRouter >
+            <HashRouter>
               <Header visibility={filtersVisible} handleCheckFilter={handleCheckFilter} handleClearInput={handleClearInput} query={query} setPokemons={setPokemons} pokemons={pokemons} setQuery={setQuery} />
               {filtersVisible && (
                 <div className="d-flex flex-wrap px-3 pt-0 pb-4">
@@ -118,7 +118,7 @@ function App() {
                 />
                 <Route path="/:id" element={<PokemonDetails />} />
               </Routes>
-            </HashRouter >
+            </HashRouter>
           </div>
         </main>
       )}
