@@ -9,6 +9,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun’s rays, the seed grows progressively larger.",       
       "height": "0.71 m",
       "weight": "6.9 kg",
       "candy": "Bulbasaur Candy",
@@ -46,6 +47,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "There is a bud on this Pokémon’s back. To support its weight, Ivysaur’s legs and trunk grow thick and strong. If it starts spending more time lying in the sunlight, it’s a sign that the bud will bloom into a large flower soon.",
       "height": "0.99 m",
       "weight": "13.0 kg",
       "candy": "Bulbasaur Candy",
@@ -86,6 +88,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "There is a large flower on Venusaur’s back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower’s aroma soothes the emotions of people.",
       "height": "2.01 m",
       "weight": "100.0 kg",
       "candy": "Bulbasaur Candy",
@@ -119,6 +122,7 @@
       "type": [
         "Fire"
       ],
+      "description": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokémon becomes enraged, the flame burns fiercely.",
       "height": "0.61 m",
       "weight": "8.5 kg",
       "candy": "Charmander Candy",
@@ -154,6 +158,7 @@
       "type": [
         "Fire"
       ],
+      "description": "Charmeleon mercilessly destroys its foes using its sharp claws. If it encounters a strong foe, it turns aggressive. In this excited state, the flame at the tip of its tail flares with a bluish white color.",
       "height": "1.09 m",
       "weight": "19.0 kg",
       "candy": "Charmander Candy",
@@ -192,6 +197,7 @@
         "Fire",
         "Flying"
       ],
+      "description": "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.",
       "height": "1.70 m",
       "weight": "90.5 kg",
       "candy": "Charmander Candy",
@@ -224,6 +230,7 @@
       "type": [
         "Water"
       ],
+      "description": "Squirtle’s shell is not merely used for protection. The shell’s rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
       "height": "0.51 m",
       "weight": "9.0 kg",
       "candy": "Squirtle Candy",
@@ -258,6 +265,7 @@
       "type": [
         "Water"
       ],
+      "description": "Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.",
       "height": "0.99 m",
       "weight": "22.5 kg",
       "candy": "Squirtle Candy",
@@ -294,6 +302,7 @@
       "type": [
         "Water"
       ],
+      "description": "Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.",
       "height": "1.60 m",
       "weight": "85.5 kg",
       "candy": "Squirtle Candy",
@@ -325,6 +334,7 @@
       "type": [
         "Bug"
       ],
+      "description": "Its body is soft and weak. In nature, its perpetual fate is to be seen by others as food.",
       "height": "0.30 m",
       "weight": "2.9 kg",
       "candy": "Caterpie Candy",
@@ -360,6 +370,7 @@
       "type": [
         "Bug"
       ],
+      "description": "Its hard shell doesn’t crack a bit even if Pikipek pecks at it, but it will tip over, spilling out its insides.",
       "height": "0.71 m",
       "weight": "9.9 kg",
       "candy": "Caterpie Candy",
@@ -399,6 +410,7 @@
         "Bug",
         "Flying"
       ],
+      "description": "Nectar from pretty flowers is its favorite food. In fields of flowers, it has heated battles with Cutiefly for territory.",
       "height": "1.09 m",
       "weight": "32.0 kg",
       "candy": "Caterpie Candy",
@@ -434,6 +446,7 @@
         "Bug",
         "Poison"
       ],
+      "description": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
       "height": "0.30 m",
       "weight": "3.2 kg",
       "candy": "Weedle Candy",
@@ -472,6 +485,7 @@
         "Bug",
         "Poison"
       ],
+      "description": "Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares for its coming evolution. This is evident from how hot the shell becomes to the touch.",
       "height": "0.61 m",
       "weight": "10.0 kg",
       "candy": "Weedle Candy",
@@ -512,6 +526,7 @@
         "Bug",
         "Poison"
       ],
+      "description": "Beedrill is extremely territorial. No one should ever approach its nest—this is for their own safety. If angered, they will attack in a furious swarm.",
       "height": "0.99 m",
       "weight": "29.5 kg",
       "candy": "Weedle Candy",
@@ -546,6 +561,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.",
       "height": "0.30 m",
       "weight": "1.8 kg",
       "candy": "Pidgey Candy",
@@ -582,6 +598,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughly punishing the foe with its sharp claws.",
       "height": "1.09 m",
       "weight": "30.0 kg",
       "candy": "Pidgey Candy",
@@ -619,6 +636,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.",
       "height": "1.50 m",
       "weight": "39.5 kg",
       "candy": "Pidgey Candy",
@@ -650,6 +668,7 @@
       "type": [
         "Normal"
       ],
+      "description": "This Pokémon is common but hazardous. Its sharp incisors can easily cut right through hard wood.",
       "height": "0.30 m",
       "weight": "3.5 kg",
       "candy": "Rattata Candy",
@@ -680,6 +699,7 @@
       "type": [
         "Normal"
       ],
+      "description": "Its whiskers are essential for maintaining its balance. No matter how friendly you are, it will get angry and bite you if you touch its whiskers.",
       "height": "0.71 m",
       "weight": "18.5 kg",
       "candy": "Rattata Candy",
@@ -707,6 +727,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "Due to its short wings, it can’t fly long distances. It wanders about restlessly and pecks at bug Pokémon.",
       "height": "0.30 m",
       "weight": "2.0 kg",
       "candy": "Spearow Candy",
@@ -739,6 +760,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "In Alola, fish Pokémon are its prey. It can be seen circling above the ocean searching for food.",
       "height": "1.19 m",
       "weight": "38.0 kg",
       "candy": "Spearow Candy",
@@ -766,6 +788,7 @@
       "type": [
         "Poison"
       ],
+      "description": "The eggs of bird Pokémon are its favorite food. It swallows eggs whole, so sometimes an egg gets stuck, and Ekans faints.",
       "height": "2.01 m",
       "weight": "6.9 kg",
       "candy": "Ekans Candy",
@@ -797,6 +820,7 @@
       "type": [
         "Poison"
       ],
+      "description": "After stunning its opponents with the pattern on its stomach, it quickly wraps them up in its body and waits for them to stop moving.",
       "height": "3.51 m",
       "weight": "65.0 kg",
       "candy": "Ekans Candy",
@@ -824,6 +848,7 @@
       "type": [
         "Electric"
       ],
+      "description": "While sleeping, it generates electricity in the sacs in its cheeks. If it’s not getting enough sleep, it will be able to use only weak electricity.",
       "height": "0.41 m",
       "weight": "6.0 kg",
       "candy": "Pikachu Candy",
@@ -853,6 +878,7 @@
       "type": [
         "Electric"
       ],
+      "description": "Because so many Trainers like the way Pikachu looks, you don’t see this Pokémon very often.",
       "height": "0.79 m",
       "weight": "30.0 kg",
       "candy": "Pikachu Candy",
@@ -879,6 +905,7 @@
       "type": [
         "Ground"
       ],
+      "description": "When its skin gets wrinkled from moisture, it heads for a volcano. It lies flat on a spot with a lot of geothermal heat and dries itself out.",
       "height": "0.61 m",
       "weight": "12.0 kg",
       "candy": "Sandshrew Candy",
@@ -910,6 +937,7 @@
       "type": [
         "Ground"
       ],
+      "description": "Thanks to its thick claws, it’s good at climbing trees. There are plenty of Sandslash that park themselves in trees and go right to sleep.",
       "height": "0.99 m",
       "weight": "29.5 kg",
       "candy": "Sandshrew Candy",
@@ -938,6 +966,7 @@
       "type": [
         "Poison"
       ],
+      "description": "Nidoran ♀ has barbs that secrete a powerful poison. They are thought to have developed as protection for this small-bodied Pokémon. When enraged, it releases a horrible toxin from its horn.",
       "height": "0.41 m",
       "weight": "7.0 kg",
       "candy": "Nidoran ♀ (Female) Candy",
@@ -973,6 +1002,7 @@
       "type": [
         "Poison"
       ],
+      "description": "When Nidorina are with their friends or family, they keep their barbs tucked away to prevent hurting each other. This Pokémon appears to become nervous if separated from the others.",
       "height": "0.79 m",
       "weight": "20.0 kg",
       "candy": "Nidoran ♀ (Female) Candy",
@@ -1011,6 +1041,7 @@
         "Poison",
         "Ground"
       ],
+      "description": "Nidoqueen’s body is encased in extremely hard scales. It is adept at sending foes flying with harsh tackles. This Pokémon is at its strongest when it is defending its young.",
       "height": "1.30 m",
       "weight": "60.0 kg",
       "candy": "Nidoran ♀ (Female) Candy",
@@ -1044,6 +1075,7 @@
       "type": [
         "Poison"
       ],
+      "description": "Nidoran ♂ has developed muscles for moving its ears. Thanks to them, the ears can be freely moved in any direction. Even the slightest sound does not escape this Pokémon’s notice.",
       "height": "0.51 m",
       "weight": "9.0 kg",
       "candy": "Nidoran ♂ (Male) Candy",
@@ -1079,6 +1111,7 @@
       "type": [
         "Poison"
       ],
+      "description": "Nidorino has a horn that is harder than a diamond. If it senses a hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.",
       "height": "0.89 m",
       "weight": "19.5 kg",
       "candy": "Nidoran ♂ (Male) Candy",
@@ -1116,6 +1149,7 @@
         "Poison",
         "Ground"
       ],
+      "description": "Nidoking’s thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.",
       "height": "1.40 m",
       "weight": "62.0 kg",
       "candy": "Nidoran ♂ (Male) Candy",
@@ -1149,6 +1183,7 @@
       "type": [
         "Normal"
       ],
+      "description": "Bathed in moonlight, its wings glow faintly. Without even flapping, Clefairy rises into the air, where it dances around.",
       "height": "0.61 m",
       "weight": "7.5 kg",
       "candy": "Clefairy Candy",
@@ -1179,6 +1214,7 @@
       "type": [
         "Normal"
       ],
+      "description": "Some scientists believe that it gazes intently at the sky on nights with a full moon because it’s homesick.",
       "height": "1.30 m",
       "weight": "40.0 kg",
       "candy": "Clefairy Candy",
@@ -1205,6 +1241,7 @@
       "type": [
         "Fire"
       ],
+      "description": "It manipulates balls of fire to catch its prey. If you raise one from when it’s young, it will grow close to you like a puppy Pokémon.",
       "height": "0.61 m",
       "weight": "9.9 kg",
       "candy": "Vulpix Candy",
@@ -1237,6 +1274,7 @@
       "type": [
         "Fire"
       ],
+      "description": "The flickering flames it spews from its mouth leave its opponents hypnotized. Then, this extremely intelligent Pokémon attacks.",
       "height": "1.09 m",
       "weight": "19.9 kg",
       "candy": "Vulpix Candy",
@@ -1265,6 +1303,7 @@
       "type": [
         "Normal"
       ],
+      "description": "The songs they sing are totally different depending on the region they live in. Some even sound like they’re shouting!",
       "height": "0.51 m",
       "weight": "5.5 kg",
       "candy": "Jigglypuff Candy",
@@ -1294,6 +1333,7 @@
       "type": [
         "Normal"
       ],
+      "description": "When it gets angry, it inhales with all its might, and its body gradually inflates. Sometimes they can grow 20 times larger!",
       "height": "0.99 m",
       "weight": "12.0 kg",
       "candy": "Jigglypuff Candy",
@@ -1321,6 +1361,7 @@
         "Poison",
         "Flying"
       ],
+      "description": "Their skin is so thin that they’ll be burned if sunlight hits them. When it gets cold out, they gather together to warm one another’s bodies.",
       "height": "0.79 m",
       "weight": "7.5 kg",
       "candy": "Zubat Candy",
@@ -1355,6 +1396,7 @@
         "Poison",
         "Flying"
       ],
+      "description": "They can suck down over 10 ounces of blood in one go. They have been known to drink so much blood that they can no longer fly.",
       "height": "1.60 m",
       "weight": "55.0 kg",
       "candy": "Zubat Candy",
@@ -1385,6 +1427,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "Oddish searches for fertile, nutrient-rich soil, then plants itself. During the daytime, while it is planted, this Pokémon’s feet are thought to change shape and become similar to the roots of trees.",
       "height": "0.51 m",
       "weight": "5.4 kg",
       "candy": "Oddish Candy",
@@ -1422,6 +1465,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "From its mouth Gloom drips honey that smells absolutely horrible. Apparently, it loves the horrid stench. It sniffs the noxious fumes and then drools even more of its honey.",
       "height": "0.79 m",
       "weight": "8.6 kg",
       "candy": "Oddish Candy",
@@ -1461,6 +1505,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "Vileplume has the world’s largest petals. They are used to attract prey that are then doused with toxic spores. Once the prey are immobilized, this Pokémon catches and devours them.",
       "height": "1.19 m",
       "weight": "18.6 kg",
       "candy": "Oddish Candy",
@@ -1495,6 +1540,7 @@
         "Bug",
         "Grass"
       ],
+      "description": "The mushrooms, known as tochukaso, are controlling the bug. Even if the bug bugs the mushrooms, they tell it to bug off.",
       "height": "0.30 m",
       "weight": "5.4 kg",
       "candy": "Paras Candy",
@@ -1530,6 +1576,7 @@
         "Bug",
         "Grass"
       ],
+      "description": "Its poisonous spores are also used in traditional medicine. Apparently, spores produced in Alola are not of very good quality.",
       "height": "0.99 m",
       "weight": "29.5 kg",
       "candy": "Paras Candy",
@@ -1562,6 +1609,7 @@
         "Bug",
         "Poison"
       ],
+      "description": "Venonat is said to have evolved with a coat of thin, stiff hair that covers its entire body for protection. It possesses large eyes that never fail to spot even minuscule prey.",
       "height": "0.99 m",
       "weight": "30.0 kg",
       "candy": "Venonat Candy",
@@ -1596,6 +1644,7 @@
         "Bug",
         "Poison"
       ],
+      "description": "Venomoth is nocturnal—it is a Pokémon that only becomes active at night. Its favorite prey are small insects that gather around streetlights, attracted by the light in the darkness.",
       "height": "1.50 m",
       "weight": "12.5 kg",
       "candy": "Venonat Candy",
@@ -1625,6 +1674,7 @@
       "type": [
         "Ground"
       ],
+      "description": "Around their crops, farmers plant the kind of tree that Diglett like to eat as a way of getting Diglett to plow the fields for them.",
       "height": "0.20 m",
       "weight": "0.8 kg",
       "candy": "Diglett Candy",
@@ -1656,6 +1706,7 @@
       "type": [
         "Ground"
       ],
+      "description": "Dugtrio’s heads are sleek and smooth and incredibly hard. It can dig through any soil with its headbutts.",
       "height": "0.71 m",
       "weight": "33.3 kg",
       "candy": "Dugtrio",
@@ -1684,6 +1735,7 @@
       "type": [
         "Normal"
       ],
+      "description": "It loves coins, so if you give it one, you can make friends with Meowth easily. But it’s fickle, so you can’t count on that friendship lasting.",
       "height": "0.41 m",
       "weight": "4.2 kg",
       "candy": "Meowth Candy",
@@ -1713,6 +1765,7 @@
       "type": [
         "Normal"
       ],
+      "description": "This Pokémon is popular with rich people. It’s also targeted by hunters who are after the jewel in its forehead.",
       "height": "0.99 m",
       "weight": "32.0 kg",
       "candy": "Meowth Candy",
@@ -1739,6 +1792,7 @@
       "type": [
         "Water"
       ],
+      "description": "It has been found that its brain cells are 10 times more active when Psyduck is experiencing a headache.",
       "height": "0.79 m",
       "weight": "19.6 kg",
       "candy": "Psyduck Candy",
@@ -1769,6 +1823,7 @@
       "type": [
         "Water"
       ],
+      "description": "A professional swimmer, it can continue swimming for two days straight by waving its long tail skillfully.",
       "height": "1.70 m",
       "weight": "76.6 kg",
       "candy": "Psyduck Candy",
@@ -1796,6 +1851,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "If one gets angry, all the others around it will get angry, so silence is a rare visitor in a troop of Mankey.",
       "height": "0.51 m",
       "weight": "28.0 kg",
       "candy": "Mankey Candy",
@@ -1828,6 +1884,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "The blood vessels in its brain are sturdier than those of other Pokémon, so it can stay healthy despite its constant raging.",
       "height": "0.99 m",
       "weight": "32.0 kg",
       "candy": "Mankey Candy",
@@ -1856,6 +1913,7 @@
       "type": [
         "Fire"
       ],
+      "description": "It has lived alongside humans since ages ago. Its bones have been found in excavations of ruins from the Stone Age.",
       "height": "0.71 m",
       "weight": "19.0 kg",
       "candy": "Growlithe Candy",
@@ -1888,6 +1946,7 @@
       "type": [
         "Fire"
       ],
+      "description": "There are so many old tales about them that they’re called legendary Pokémon, but there are way more of them around than you’d expect.",
       "height": "1.91 m",
       "weight": "155.0 kg",
       "candy": "Growlithe Candy",
@@ -1916,6 +1975,7 @@
       "type": [
         "Water"
       ],
+      "description": "The direction of the swirl on their stomachs differs depending on where they live. Poliwag aficionados can tell them apart at a glance.",
       "height": "0.61 m",
       "weight": "12.4 kg",
       "candy": "Poliwag Candy",
@@ -1951,6 +2011,7 @@
       "type": [
         "Water"
       ],
+      "description": "Its health suffers when its skin dries out, so be sure to moisturize it diligently.",
       "height": "0.99 m",
       "weight": "20.0 kg",
       "candy": "Poliwag Candy",
@@ -1988,6 +2049,7 @@
         "Water",
         "Fighting"
       ],
+      "description": "The muscles it has developed through swimming are thick and powerful. When it lands a square punch, it can turn huge boulders to dust.",
       "height": "1.30 m",
       "weight": "54.0 kg",
       "candy": "Poliwag Candy",
@@ -2022,6 +2084,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "It can read others’ minds and will teleport away when danger approaches. You must clear your mind if you want to catch it.",
       "height": "0.89 m",
       "weight": "19.5 kg",
       "candy": "Abra Candy",
@@ -2058,6 +2121,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "It possesses strong mental capabilities, but its psychic powers are halved when it’s not holding a silver spoon.",
       "height": "1.30 m",
       "weight": "56.5 kg",
       "candy": "Abra Candy",
@@ -2095,6 +2159,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "If it trusts someone deeply, it will let them have one of its spoons. Anything you eat with that spoon is apparently delicious.",
       "height": "1.50 m",
       "weight": "48.0 kg",
       "candy": "Abra Candy",
@@ -2127,6 +2192,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "It likes food that’s highly nutritious because its instincts drive it to build muscle efficiently.",
       "height": "0.79 m",
       "weight": "19.5 kg",
       "candy": "Machop Candy",
@@ -2163,6 +2229,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "A popular motif for sculptures, its incredibly well-developed muscles have captured the imagination of many an artist.",
       "height": "1.50 m",
       "weight": "70.5 kg",
       "candy": "Machop Candy",
@@ -2200,6 +2267,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "With four arms, it can attack and defend simultaneously. It’s said to have mastered every martial art in the world.",
       "height": "1.60 m",
       "weight": "130.0 kg",
       "candy": "Machop Candy",
@@ -2233,6 +2301,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "Bellsprout’s thin and flexible body lets it bend and sway to avoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.",
       "height": "0.71 m",
       "weight": "4.0 kg",
       "candy": "Bellsprout Candy",
@@ -2270,6 +2339,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "Weepinbell has a large hook on its rear end. At night, the Pokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itself on the ground.",
       "height": "0.99 m",
       "weight": "6.4 kg",
       "candy": "Bellsprout Candy",
@@ -2309,6 +2379,7 @@
         "Grass",
         "Poison"
       ],
+      "description": "Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal to attract prey. When an unsuspecting prey draws near, this Pokémon swallows it whole.",
       "height": "1.70 m",
       "weight": "15.5 kg",
       "candy": "Bellsprout Candy",
@@ -2343,6 +2414,7 @@
         "Water",
         "Poison"
       ],
+      "description": "Its body is 99% water. The remaining 1% contains the organ that makes its poison.",
       "height": "0.89 m",
       "weight": "45.5 kg",
       "candy": "Tentacool Candy",
@@ -2375,6 +2447,7 @@
         "Water",
         "Poison"
       ],
+      "description": "It communicates with others of its kind by lighting up the red orbs on its head. When the orbs are blinking, it’s a warning sign.",
       "height": "1.60 m",
       "weight": "55.0 kg",
       "candy": "Tentacool Candy",
@@ -2404,6 +2477,7 @@
         "Rock",
         "Ground"
       ],
+      "description": "It uses both hands to climb precipitous cliffs. People who see it in action have been known to take up bouldering.",
       "height": "0.41 m",
       "weight": "20.0 kg",
       "candy": "Geodude Candy",
@@ -2444,6 +2518,7 @@
         "Rock",
         "Ground"
       ],
+      "description": "It travels by rolling down cliffs. If it falls into a river, it will explode with its last gasp.",
       "height": "0.99 m",
       "weight": "105.0 kg",
       "candy": "Geodude Candy",
@@ -2486,6 +2561,7 @@
         "Rock",
         "Ground"
       ],
+      "description": "It detonates its own body. The power from that explosion can propel it up steep mountain paths with amazing speed.",
       "height": "1.40 m",
       "weight": "300.0 kg",
       "candy": "Geodude Candy",
@@ -2521,6 +2597,7 @@
       "type": [
         "Fire"
       ],
+      "description": "Ponyta is very weak at birth. It can barely stand up. This Pokémon becomes stronger by stumbling and falling to keep up with its parent.",
       "height": "0.99 m",
       "weight": "30.0 kg",
       "candy": "Ponyta Candy",
@@ -2553,6 +2630,7 @@
       "type": [
         "Fire"
       ],
+      "description": "Rapidash usually can be seen casually cantering in the fields and plains. However, when this Pokémon turns serious, its fiery manes flare and blaze as it gallops its way up to 150 mph.",
       "height": "1.70 m",
       "weight": "95.0 kg",
       "candy": "Ponyta Candy",
@@ -2582,6 +2660,7 @@
         "Water",
         "Psychic"
       ],
+      "description": "Although their tails, which fall off naturally, can easily be found lying around, they’re a precious ingredient for cooking.",
       "height": "1.19 m",
       "weight": "36.0 kg",
       "candy": "Slowpoke Candy",
@@ -2616,6 +2695,7 @@
         "Water",
         "Psychic"
       ],
+      "description": "Shellder, in its greed to suck out more and more sweetness from Slowbro’s tail, has metamorphosed into a spiral-shaped shell.",
       "height": "1.60 m",
       "weight": "78.5 kg",
       "candy": "Slowpoke Candy",
@@ -2646,6 +2726,7 @@
       "type": [
         "Electric"
       ],
+      "description": "Perhaps because electrical lines are often buried these days, the number of Magnemite attacks on power plants has increased.",
       "height": "0.30 m",
       "weight": "6.0 kg",
       "candy": "Magnemite Candy",
@@ -2678,6 +2759,7 @@
       "type": [
         "Electric"
       ],
+      "description": "When rain clouds form, many Magneton gather in high places to wait for lightning to strike.",
       "height": "0.99 m",
       "weight": "60.0 kg",
       "candy": "Magnemite Candy",
@@ -2707,6 +2789,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "Farfetch’d is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.",
       "height": "0.79 m",
       "weight": "15.0 kg",
       "candy": "None",
@@ -2729,6 +2812,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "Doduo’s two heads contain completely identical brains. A scientific study reported that on rare occasions, there will be examples of this Pokémon possessing different sets of brains.",
       "height": "1.40 m",
       "weight": "39.2 kg",
       "candy": "Doduo Candy",
@@ -2761,6 +2845,7 @@
         "Normal",
         "Flying"
       ],
+      "description": "Apparently, the heads aren’t the only parts of the body that Dodrio has three of. It has three sets of hearts and lungs as well, so it is capable of running long distances without rest.",
       "height": "1.80 m",
       "weight": "85.2 kg",
       "candy": "Doduo Candy",
@@ -2788,6 +2873,7 @@
       "type": [
         "Water"
       ],
+      "description": "Thanks to its thick fat, cold seas don’t bother it at all, but it gets tired pretty easily in warm waters.",
       "height": "1.09 m",
       "weight": "90.0 kg",
       "candy": "Seel Candy",
@@ -2820,6 +2906,7 @@
         "Water",
         "Ice"
       ],
+      "description": "It sunbathes on the beach after meals. The rise in its body temperature helps its digestion.",
       "height": "1.70 m",
       "weight": "120.0 kg",
       "candy": "Seel Candy",
@@ -2849,6 +2936,7 @@
       "type": [
         "Poison"
       ],
+      "description": "The wastewater coming from factories is clean these days, so Grimer have nothing to eat. They’re said to be on the verge of extinction.",
       "height": "0.89 m",
       "weight": "30.0 kg",
       "candy": "Grimer Candy",
@@ -2879,6 +2967,7 @@
       "type": [
         "Poison"
       ],
+      "description": "Because they scatter germs everywhere, they’ve long been targeted for extermination, leading to a steep decline in their population.",
       "height": "1.19 m",
       "weight": "30.0 kg",
       "candy": "Grimer Candy",
@@ -2906,6 +2995,7 @@
       "type": [
         "Water"
       ],
+      "description": "Even when its shell is closed, its tongue still hangs out. If you give its tongue a good yank, the shock will cause Shellder to open its shell.",
       "height": "0.30 m",
       "weight": "4.0 kg",
       "candy": "Shellder Candy",
@@ -2937,6 +3027,7 @@
         "Water",
         "Ice"
       ],
+      "description": "Slowpoke tails are its favorite food. It has even been known to come up on land to look for Slowpoke from time to time.",
       "height": "1.50 m",
       "weight": "132.5 kg",
       "candy": "Shellder Candy",
@@ -2967,6 +3058,7 @@
         "Ghost",
         "Poison"
       ],
+      "description": "Poisonous gas comprises 95% of its body. It’s said that the remaining 5% is made up of the souls of those who died from the gas.",
       "height": "1.30 m",
       "weight": "0.1 kg",
       "candy": "Gastly Candy",
@@ -3004,6 +3096,7 @@
         "Ghost",
         "Poison"
       ],
+      "description": "It’s dangerous to go outside alone on nights when you’re feeling sad. Haunter will catch you, and you won’t be able to go back home.",
       "height": "1.60 m",
       "weight": "0.1 kg",
       "candy": "Gastly Candy",
@@ -3044,6 +3137,7 @@
         "Ghost",
         "Poison"
       ],
+      "description": "Even your home isn’t safe. Gengar will lurk in whatever dark corner of a room it can find and wait for its chance to catch its prey.",
       "height": "1.50 m",
       "weight": "40.5 kg",
       "candy": "Gastly Candy",
@@ -3078,6 +3172,7 @@
         "Rock",
         "Ground"
       ],
+      "description": "Onix has a magnet in its brain. It acts as a compass so that this Pokémon does not lose direction while it is tunneling. As it grows older, its body becomes increasingly rounder and smoother.",
       "height": "8.79 m",
       "weight": "210.0 kg",
       "candy": "None",
@@ -3103,6 +3198,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "It puts its prey to sleep and devours their dreams. It seems that bad dreams taste sour, so Drowzee doesn’t particularly like eating them.",
       "height": "0.99 m",
       "weight": "32.4 kg",
       "candy": "Drowzee Candy",
@@ -3135,6 +3231,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "There are some Hypno that assist doctors with patients who can’t sleep at night in hospitals.",
       "height": "1.60 m",
       "weight": "75.6 kg",
       "candy": "Drowzee Candy",
@@ -3163,6 +3260,7 @@
       "type": [
         "Water"
       ],
+      "description": "Krabby live on beaches, burrowed inside holes dug into the sand. On sandy beaches with little in the way of food, these Pokémon can be seen squabbling with each other over territory.",
       "height": "0.41 m",
       "weight": "6.5 kg",
       "candy": "Krabby Candy",
@@ -3194,6 +3292,7 @@
       "type": [
         "Water"
       ],
+      "description": "Kingler has an enormous, oversized claw. It waves this huge claw in the air to communicate with others. However, because the claw is so heavy, the Pokémon quickly tires.",
       "height": "1.30 m",
       "weight": "60.0 kg",
       "candy": "Krabby Candy",
@@ -3221,6 +3320,7 @@
       "type": [
         "Electric"
       ],
+      "description": "Voltorb is extremely sensitive—it explodes at the slightest of shocks. It is rumored that it was first created when a Poké Ball was exposed to a powerful pulse of energy.",
       "height": "0.51 m",
       "weight": "10.4 kg",
       "candy": "Voltorb Candy",
@@ -3251,6 +3351,7 @@
       "type": [
         "Electric"
       ],
+      "description": "One of Electrode’s characteristics is its attraction to electricity. It is a problematical Pokémon that congregates mostly at electrical power plants to feed on electricity that has just been generated.",
       "height": "1.19 m",
       "weight": "66.6 kg",
       "candy": "Voltorb Candy",
@@ -3278,6 +3379,7 @@
         "Grass",
         "Psychic"
       ],
+      "description": "Although they are the same size as other Exeggcute, the ones produced in Alola are quite heavy. Their shells are packed full.",
       "height": "0.41 m",
       "weight": "2.5 kg",
       "candy": "Exeggcute Candy",
@@ -3315,6 +3417,7 @@
         "Grass",
         "Psychic"
       ],
+      "description": "Each of its three heads has its own thoughts. When they want to go in different directions, Exeggutor becomes unable to move.",
       "height": "2.01 m",
       "weight": "120.0 kg",
       "candy": "Exeggcute Candy",
@@ -3347,6 +3450,7 @@
       "type": [
         "Ground"
       ],
+      "description": "It wears its mother’s skull on its head, so no one knows what its bare face looks like. However, it’s clear that it’s always crying.",
       "height": "0.41 m",
       "weight": "6.5 kg",
       "candy": "Cubone Candy",
@@ -3378,6 +3482,7 @@
       "type": [
         "Ground"
       ],
+      "description": "They thump their bones rhythmically to communicate among themselves. There are nearly 50 different rhythmic patterns.",
       "height": "0.99 m",
       "weight": "45.0 kg",
       "candy": "Cubone Candy",
@@ -3406,6 +3511,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "Hitmonlee’s legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue.",
       "height": "1.50 m",
       "weight": "49.8 kg",
       "candy": "None",
@@ -3428,6 +3534,7 @@
       "type": [
         "Fighting"
       ],
+      "description": "Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity.",
       "height": "1.40 m",
       "weight": "50.2 kg",
       "candy": "None",
@@ -3450,6 +3557,7 @@
       "type": [
         "Normal"
       ],
+      "description": "It licks filth clean with its tongue. Whatever it licks always stinks afterward, so whether it’s really clean is...questionable.",
       "height": "1.19 m",
       "weight": "65.5 kg",
       "candy": "None",
@@ -3470,6 +3578,7 @@
       "type": [
         "Poison"
       ],
+      "description": "Koffing embodies toxic substances. It mixes the toxins with raw garbage to set off a chemical reaction that results in a terribly powerful poison gas. The higher the temperature, the more gas is concocted by this Pokémon.",
       "height": "0.61 m",
       "weight": "1.0 kg",
       "candy": "Koffing Candy",
@@ -3500,6 +3609,7 @@
       "type": [
         "Poison"
       ],
+      "description": "Weezing alternately shrinks and inflates its twin bodies to mix together toxic gases inside. The more the gases are mixed, the more powerful the toxins become. The Pokémon also becomes more putrid.",
       "height": "1.19 m",
       "weight": "9.5 kg",
       "candy": "Koffing Candy",
@@ -3528,6 +3638,7 @@
         "Ground",
         "Rock"
       ],
+      "description": "Rhyhorn’s brain is very small. It is so dense, while on a run it forgets why it started running in the first place. It apparently remembers sometimes if it demolishes something.",
       "height": "0.99 m",
       "weight": "115.0 kg",
       "candy": "Rhyhorn Candy",
@@ -3563,6 +3674,7 @@
         "Ground",
         "Rock"
       ],
+      "description": "Rhydon has a horn that serves as a drill. It is used for destroying rocks and boulders. This Pokémon occasionally rams into streams of magma, but the armor-like hide prevents it from feeling the heat.",
       "height": "1.91 m",
       "weight": "120.0 kg",
       "candy": "Rhyhorn Candy",
@@ -3594,6 +3706,7 @@
       "type": [
         "Normal"
       ],
+      "description": "Because the eggs on their bellies have been overharvested by people in the past, the Chansey population remains very small.",
       "height": "1.09 m",
       "weight": "34.6 kg",
       "candy": "None",
@@ -3614,6 +3727,7 @@
       "type": [
         "Grass"
       ],
+      "description": "Tangela’s vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quick getaway. The lost vines are replaced by newly grown vines the very next day.",
       "height": "0.99 m",
       "weight": "35.0 kg",
       "candy": "None",
@@ -3638,6 +3752,7 @@
       "type": [
         "Normal"
       ],
+      "description": "You shouldn’t get close to the child when it’s playing outside its mother’s pouch. Its mother is always nearby watching over it.",
       "height": "2.21 m",
       "weight": "80.0 kg",
       "candy": "None",
@@ -3658,6 +3773,7 @@
       "type": [
         "Water"
       ],
+      "description": "If Horsea senses danger, it will reflexively spray a dense black ink from its mouth and try to escape. This Pokémon swims by cleverly flapping the fin on its back.",
       "height": "0.41 m",
       "weight": "8.0 kg",
       "candy": "Horsea Candy",
@@ -3688,6 +3804,7 @@
       "type": [
         "Water"
       ],
+      "description": "Seadra generates whirlpools by spinning its body. The whirlpools are strong enough to swallow even fishing boats. This Pokémon weakens prey with these currents, then swallows it whole.",
       "height": "1.19 m",
       "weight": "25.0 kg",
       "candy": "Horsea Candy",
@@ -3715,6 +3832,7 @@
       "type": [
         "Water"
       ],
+      "description": "The way it swims along fluttering its dress-like fins has earned it the name “princess of the water.”",
       "height": "0.61 m",
       "weight": "15.0 kg",
       "candy": "Goldeen Candy",
@@ -3746,6 +3864,7 @@
       "type": [
         "Water"
       ],
+      "description": "To attract females, males dance on the river’s floor. The females gather around the male that dances most gracefully.",
       "height": "1.30 m",
       "weight": "39.0 kg",
       "candy": "Goldeen Candy",
@@ -3773,6 +3892,7 @@
       "type": [
         "Water"
       ],
+      "description": "No number of injuries can bother Staryu. Its amazing regenerative powers return it to its previous state in half a day!",
       "height": "0.79 m",
       "weight": "34.5 kg",
       "candy": "Staryu Candy",
@@ -3805,6 +3925,7 @@
         "Water",
         "Psychic"
       ],
+      "description": "It rotates its geometrically shaped body to swim through the water. It always seems to be sending out mysterious radio waves.",
       "height": "1.09 m",
       "weight": "80.0 kg",
       "candy": "Staryu Candy",
@@ -3835,6 +3956,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "It creates invisible walls with its pantomiming. If you don’t act impressed, it will attack you with a double slap!",
       "height": "1.30 m",
       "weight": "54.5 kg",
       "candy": "None",
@@ -3858,6 +3980,7 @@
         "Bug",
         "Flying"
       ],
+      "description": "Some call it a ninja. Its movements— imperceptibly quick—are sufficient to cleave the air in two. It’s very popular in Alola.",
       "height": "1.50 m",
       "weight": "56.0 kg",
       "candy": "None",
@@ -3883,6 +4006,7 @@
         "Ice",
         "Psychic"
       ],
+      "description": "Its strange cries sound like human language. There are some musicians who compose songs for Jynx to sing.",
       "height": "1.40 m",
       "weight": "40.6 kg",
       "candy": "None",
@@ -3908,6 +4032,7 @@
       "type": [
         "Electric"
       ],
+      "description": "While it’s often blamed for power outages, the truth is the cause of outages is more often an error on the part of the electric company.",
       "height": "1.09 m",
       "weight": "30.0 kg",
       "candy": "None",
@@ -3928,6 +4053,7 @@
       "type": [
         "Fire"
       ],
+      "description": "The hotter the place, the better they feel. Magmar in Alola are said to be hardier than those in other areas.",
       "height": "1.30 m",
       "weight": "44.5 kg",
       "candy": "None",
@@ -3950,6 +4076,7 @@
       "type": [
         "Bug"
       ],
+      "description": "Although it’s tough, it can’t handle cold well. When night falls, it buries itself in leafage and sleeps.",
       "height": "1.50 m",
       "weight": "55.0 kg",
       "candy": "None",
@@ -3972,6 +4099,7 @@
       "type": [
         "Normal"
       ],
+      "description": "The climate seems to be related to the reason Tauros in Alola are a little calmer than those in other regions.",
       "height": "1.40 m",
       "weight": "88.4 kg",
       "candy": "None",
@@ -3992,6 +4120,7 @@
       "type": [
         "Water"
       ],
+      "description": "Thanks to their strong hold on life, dirty water doesn’t bother them at all. They live in waters all over the world!",
       "height": "0.89 m",
       "weight": "10.0 kg",
       "candy": "Magikarp Candy",
@@ -4024,6 +4153,7 @@
         "Water",
         "Flying"
       ],
+      "description": "The energy from evolution stimulated its brain cells strongly, causing it to become very ferocious.",
       "height": "6.50 m",
       "weight": "235.0 kg",
       "candy": "Magikarp Candy",
@@ -4052,6 +4182,7 @@
         "Water",
         "Ice"
       ],
+      "description": "They’ve been so cherished that there’s now an overabundance. The fish Pokémon population has declined in waters with too many Lapras.",
       "height": "2.49 m",
       "weight": "220.0 kg",
       "candy": "None",
@@ -4075,6 +4206,7 @@
       "type": [
         "Normal"
       ],
+      "description": "It transforms into whatever it sees. If the thing it’s transforming into isn’t right in front of it, Ditto relies on its memory—so sometimes it fails.",
       "height": "0.30 m",
       "weight": "4.0 kg",
       "candy": "None",
@@ -4095,6 +4227,7 @@
       "type": [
         "Normal"
       ],
+      "description": "Its genes are easily influenced by its surroundings. Even its face starts to look like that of its Trainer.",
       "height": "0.30 m",
       "weight": "6.5 kg",
       "candy": "Eevee Candy",
@@ -4133,6 +4266,7 @@
       "type": [
         "Water"
       ],
+      "description": "It detects nearby moisture with its fin. When its fin begins trembling rapidly, that means rain will fall in a few hours.",
       "height": "0.99 m",
       "weight": "29.0 kg",
       "candy": "Eevee Candy",
@@ -4160,6 +4294,7 @@
       "type": [
         "Electric"
       ],
+      "description": "Its fur stands on end, becoming like needles it fires at enemies. Once they’re weakened, it finishes them off with a 10,000 volt shock.",
       "height": "0.79 m",
       "weight": "24.5 kg",
       "candy": "None",
@@ -4186,6 +4321,7 @@
       "type": [
         "Fire"
       ],
+      "description": "The flame chamber inside its body ignites when Flareon gets agitated, reaching temperatures of up to 1,650 degrees Fahrenheit.",
       "height": "0.89 m",
       "weight": "25.0 kg",
       "candy": "Eevee Candy",
@@ -4214,6 +4350,7 @@
       "type": [
         "Normal"
       ],
+      "description": "It was built 20 years ago by scientists who dreamed of exploring space. Their dreams have yet to come true.",
       "height": "0.79 m",
       "weight": "36.5 kg",
       "candy": "None",
@@ -4235,6 +4372,7 @@
         "Rock",
         "Water"
       ],
+      "description": "It was restored from an ancient fossil. Those Helix Fossils are excavated from areas that were once oceans long, long ago.",
       "height": "0.41 m",
       "weight": "7.5 kg",
       "candy": "Omanyte Candy",
@@ -4268,6 +4406,7 @@
         "Rock",
         "Water"
       ],
+      "description": "It wraps its prey in its tentacles to immobilize them and then finishes them off with its sharp fangs.",
       "height": "0.99 m",
       "weight": "35.0 kg",
       "candy": "None",
@@ -4298,6 +4437,7 @@
         "Rock",
         "Water"
       ],
+      "description": "This Pokémon became extinct everywhere, except in a few areas. It protects itself with its hard shell.",
       "height": "0.51 m",
       "weight": "11.5 kg",
       "candy": "Kabuto Candy",
@@ -4332,6 +4472,7 @@
         "Rock",
         "Water"
       ],
+      "description": "It swims at speeds of roughly 29 knots, quickly closing in on its prey and slashing into them with its scythes to finish them off.",
       "height": "1.30 m",
       "weight": "40.5 kg",
       "candy": "Kabuto Candy",
@@ -4362,6 +4503,7 @@
         "Rock",
         "Flying"
       ],
+      "description": "It flew through the open skies over the ancient continent as if they were its own. When it touched ground, its walk was weak and slow.",
       "height": "1.80 m",
       "weight": "59.0 kg",
       "candy": "None",
@@ -4386,6 +4528,7 @@
       "type": [
         "Normal"
       ],
+      "description": "It has no interest in anything other than eating. Even if you climb up on its stomach while it’s napping, it doesn’t seem to mind at all!",
       "height": "2.11 m",
       "weight": "460.0 kg",
       "candy": "None",
@@ -4407,6 +4550,7 @@
         "Ice",
         "Flying"
       ],
+      "description": "Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.",
       "height": "1.70 m",
       "weight": "55.4 kg",
       "candy": "None",
@@ -4431,6 +4575,7 @@
         "Electric",
         "Flying"
       ],
+      "description": "Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. The Pokémon gains power if it is stricken by lightning bolts.",
       "height": "1.60 m",
       "weight": "52.6 kg",
       "candy": "None",
@@ -4453,6 +4598,7 @@
         "Fire",
         "Flying"
       ],
+      "description": "Moltres is a legendary bird Pokémon that has the ability to control fire. If this Pokémon is injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.",
       "height": "2.01 m",
       "weight": "60.0 kg",
       "candy": "None",
@@ -4475,6 +4621,7 @@
       "type": [
         "Dragon"
       ],
+      "description": "It sheds its skin—almost on a daily basis—and grows larger. Its skin is soft just after it’s been shed.",
       "height": "1.80 m",
       "weight": "3.3 kg",
       "candy": "Dratini Candy",
@@ -4511,6 +4658,7 @@
       "type": [
         "Dragon"
       ],
+      "description": "Some say that if you see it at the start of the year, flying through the sky and twisting its body, you’ll be healthy all year long.",
       "height": "3.99 m",
       "weight": "16.5 kg",
       "candy": "Dratini Candy",
@@ -4549,6 +4697,7 @@
         "Dragon",
         "Flying"
       ],
+      "description": "You’ll often hear tales of this kindhearted Pokémon rescuing people or Pokémon that are drowning.",
       "height": "2.21 m",
       "weight": "210.0 kg",
       "candy": "Dratini Candy",
@@ -4582,6 +4731,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "Mewtwo is a Pokémon that was created by genetic manipulation. However, even though the scientific power of humans created this Pokémon’s body, they failed to endow Mewtwo with a compassionate heart.",
       "height": "2.01 m",
       "weight": "122.0 kg",
       "candy": "None",
@@ -4604,6 +4754,7 @@
       "type": [
         "Psychic"
       ],
+      "description": "Mew is said to possess the genetic composition of all Pokémon. It is capable of making itself invisible at will, so it entirely avoids notice even if it approaches people.",
       "height": "0.41 m",
       "weight": "4.0 kg",
       "candy": "None",

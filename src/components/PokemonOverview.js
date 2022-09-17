@@ -1,19 +1,19 @@
 import React from "react";
 import PokemonBio from "./PokemonBio";
+import avatar from "../assets/icons/missing.svg";
 
-class Pagination extends React.Component {
+class PokemonOverview extends React.Component {
   constructor(props) {
     super();
     this.state = {
       currentPage: 1,
       pokemonsPerPage: 12,
-      isActive: "0"
+      isActive: 1,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidUpdate() {
-    // capping/limitting currentPage if it exceeds above maxPage to maxpage
     if (this.state.currentPage > 1) {
       const maxPage = Math.ceil(
         this.props.pokemons.length / this.state.pokemonsPerPage
@@ -24,9 +24,9 @@ class Pagination extends React.Component {
   }
 
   handleClick(event) {
-    this.setState({ 
+    this.setState({
       currentPage: +event.currentTarget.id,
-      isActive: +event.currentTarget.id
+      isActive: +event.currentTarget.id,
     });
   }
 
@@ -42,8 +42,14 @@ class Pagination extends React.Component {
     if (maxPage > 1) {
       for (let i = 1; i <= maxPage; i++) {
         pageNumDOM.push(
-          <li key={i} id={i} onClick={this.handleClick}>
-            <h5 className={`page-number mx-2 fw-bold ${isActive === i ? "active" : ""}`}>{i}</h5>
+          <li key={i} id={i} className="p-2 py-1" onClick={this.handleClick}>
+            <h5
+              className={`page-number p-2 mx-1 fw-bold ${
+                isActive === i ? "active" : ""
+              }`}
+            >
+              {i}
+            </h5>
           </li>
         );
       }
@@ -58,21 +64,25 @@ class Pagination extends React.Component {
     }
 
     return (
-      <div className="row mx-auto p-0">
+      <>
         {currentPokemonsDOM.length === 0 ? (
-          <div className="p-5 my-auto mt-5">
-            <h2>No Pokémon found</h2>
+          <div className="row pokemon-wrapper justify-content-center align-items-center flex-column">
+            <div>
+              <img src={avatar} alt="avatar" width={200} className="mb-5" />
+              <h2>No Pokémon found</h2>
+            </div>
           </div>
         ) : (
-          ""
+          <div className="pokemon-wrapper mt-3 mt-sm-0">
+            <div className="row w-100">{currentPokemonsDOM}</div>
+          </div>
         )}
-        {currentPokemonsDOM}
-        <span className="page-numbers my-3">
-          <h5 className="d-flex flex-wrap">{pageNumDOM}</h5>
+        <span className="page-numbers">
+          <h5 className="d-flex flex-wrap mt-2">{pageNumDOM}</h5>
         </span>
-      </div>
+      </>
     );
   }
 }
 
-export default Pagination;
+export default PokemonOverview;
