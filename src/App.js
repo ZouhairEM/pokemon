@@ -6,7 +6,7 @@ import PokemonDetails from "./components/PokemonDetails";
 import Spinner from "./assets/icons/spinner.svg"
 import { getPokemon } from "./services/services";
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter , Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -75,7 +75,7 @@ function App() {
       {isLoaded && (
         <main>
           <div className="row mx-auto d-flex flex-column p-3 py-4">
-            <BrowserRouter>
+            <HashRouter >
               <Header visibility={filtersVisible} handleCheckFilter={handleCheckFilter} handleClearInput={handleClearInput} query={query} setPokemons={setPokemons} pokemons={pokemons} setQuery={setQuery} />
               {filtersVisible && (
                 <div className="d-flex flex-wrap px-3 pt-0 pb-4">
@@ -118,7 +118,7 @@ function App() {
                 />
                 <Route path="/:id" element={<PokemonDetails />} />
               </Routes>
-            </BrowserRouter>
+            </HashRouter >
           </div>
         </main>
       )}
