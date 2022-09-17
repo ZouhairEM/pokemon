@@ -26,7 +26,7 @@ h1 {
   /* display: flex; */
 }
 
-#root > div {
+main {
   max-width: 900px;
   margin: 2.5em auto;
   box-shadow: 3px 3px #a89b9b;
@@ -46,6 +46,7 @@ h1 {
 
 .pokemon-wrapper {
   place-content: flex-start;
+  min-height: 550px;
 }
 
 .white-card {
@@ -174,6 +175,11 @@ h1 {
   background: -moz-linear-gradient(top, #2f2148 28%, #594679 77%);
 }
 
+.fairy-type {
+  background: #95325f;
+  background: -moz-linear-gradient(top, #95325f 28%, #5d1f4e 77%);
+}
+
 .background {
   background-image: url("../src/assets//icons/pokeball.svg");
   background-position: 15vh;
@@ -280,6 +286,17 @@ img.filter-img {
   z-index: 0;
 }
 
+.spinner {
+  background: #fff;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: loading 2s linear infinite;
+  -moz-animation: loading 2s linear infinite;
+  -ms-animation: loading 2s linear infinite;
+  -o-animation: loading 2s linear infinite;
+  animation: loading 2s linear infinite;
+}
+
 .pokemon-bio:hover > a > div > div > div > div > img {
   animation: jump 1.2s infinite;
 }
@@ -305,5 +322,18 @@ img.filter-img {
   }
   100% {
     transform: translate(-5%, -5%) scale(1.15, 0.95);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

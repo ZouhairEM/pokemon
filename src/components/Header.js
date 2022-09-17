@@ -24,14 +24,14 @@ const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPok
           <span className="position-relative">
             <h1 className="col-12 col-sm-8 col-md-6 pokemon-logo mx-auto fw-bold mb-3 p-2 text-white">
               <Link to={"/"}>
-                <img src={pokemonLogo} width={170} alt={pokemonLogo} className="position-absolute top-50 start-0 translate-middle" />
+                <img src={pokemonLogo} width={155} alt={pokemonLogo} className="position-absolute top-50 start-0 translate-middle" />
               </Link>
             </h1>
           </span>
         </div>
         <div className="col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column">
           <h5 className="d-flex justify-content-start pb-3">
-            Search Pokémon
+            Search for Pokémon
           </h5>
           <div className="d-flex input-group p-1 m-0">
             <input

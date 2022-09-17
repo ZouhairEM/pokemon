@@ -66,14 +66,14 @@ class PokemonOverview extends React.Component {
     return (
       <>
         {currentPokemonsDOM.length === 0 ? (
-          <div className="row pokemon-wrapper justify-content-center">
+          <div className="row pokemon-wrapper justify-content-center align-items-center flex-column">
             <div>
               <img src={avatar} alt="avatar" width={200} className="mb-5" />
               <h2>No Pokémon found</h2>
             </div>
           </div>
         ) : (
-          <div className="pokemon-wrapper d-flex align-items-center mt-3 mt-sm-0">
+          <div className="pokemon-wrapper mt-3 mt-sm-0">
             <div className="row w-100">{currentPokemonsDOM}</div>
           </div>
         )}

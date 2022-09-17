@@ -11,7 +11,6 @@ const PokemonDetails = () => {
 
   const [evolutions, setEvolutions] = useState([]);
   const { id } = useParams();
-
   useEffect(() => {
     const res = pokemons.filter((el) => {
       return el.name === id.charAt(0).toUpperCase() + id.slice(1);
@@ -35,7 +34,7 @@ const PokemonDetails = () => {
           <div className="position-relative">
             <h1 className="text-center pb-2">{pokemon[0].name}</h1>
             <Link to={'/'}>
-              <img src={Arrow} alt="arrow" width={40} className="position-absolute top-0 arrow-left" style={{ left: '0%', transform: 'scaleX(-1)' }} />
+              <img src={Arrow} alt="arrow" width={30} className="position-absolute top-0 arrow-left" style={{ left: '0%', transform: 'scaleX(-1)' }} />
             </Link>
           </div>
         </div>
@@ -49,7 +48,7 @@ const PokemonDetails = () => {
             style={{ height: "150px" }}
           />
         </div>
-        <div className="d-flex justify-content-between p-0 my-4">
+        <div className="d-flex justify-content-between p-0 my-5">
           <h2 className="fw-bold d-flex align-items-center">#{pokemon[0].num}</h2>
           <div className="d-flex">
             <h3
@@ -66,14 +65,11 @@ const PokemonDetails = () => {
             )}
           </div>
         </div>
-        <h5 className="text-start">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis vero
-          ad facilis vel error doloribus quam placeat quisquam aliquam iusto
-          veritatis odit, ab voluptatibus assumenda quidem perspiciatis officiis
-          repellendus est.
+        <h5 className="text-start mb-4">
+          {pokemon[0].description}
         </h5>
         <h2 className="py-4 text-start">Weaknesses</h2>
-        <div className="d-flex flex-wrap">
+        <div className="d-flex flex-wrap mb-4">
           {pokemon[0].weaknesses.map((el, i) => {
             return (
               <h5
@@ -95,7 +91,8 @@ const PokemonDetails = () => {
                 className="img-fluid mb-2"
                 width={75}
               />
-              <h4 style={{color: '#fa5c42'}}>{pokemon[0].name}</h4>
+                <h4 className="mt-2">{pokemon[0].name}</h4>
+                {evolutions.length !== 0 ? (<span style={{ height: '3px', width: '100%', background: '#fa5c42', marginTop: '-1px' }}></span>) : ''}              
             </div>
           ) : (
             ""
@@ -105,7 +102,7 @@ const PokemonDetails = () => {
               <>
                 <div className="d-flex justify-content-center align-content-center">
                   {el.num > pokemon[0].num ? (
-                    <img src={Arrow} alt="arrow" width={40} className="mx-5" />
+                    <img src={Arrow} alt="arrow" width={30} className="mx-5" />
                   ) : (
                     ""
                   )}
@@ -129,7 +126,7 @@ const PokemonDetails = () => {
                       <img
                         src={Arrow}
                         alt="arrow"
-                        width={40}
+                        width={30}
                         className="mx-5"
                       />
                     ) : (
@@ -149,7 +146,8 @@ const PokemonDetails = () => {
                   className="img-fluid"
                   width={75}
                 />
-                <h4 className="mt-2" style={{ color: '#fa5c42' }}>{pokemon[0].name}</h4>
+                <h4 className="mt-2">{pokemon[0].name}</h4>
+                {evolutions.length !== 0 ? (<span style={{ height: '3px', width: '100%', background: '#fa5c42', marginTop: '-1px' }}></span>) : ''}
               </div>
             </div>
           ) : (
