@@ -7,7 +7,7 @@ import Spinner from "./assets/icons/spinner.svg"
 import { getPokemon } from "./services/services";
 import { useState, useEffect } from "react";
 import { HashRouter , Routes, Route } from "react-router-dom";
-
+import NotFound from "./components/NotFound";
 
 function App() {
   const [pokemons, setPokemons] = useState(getPokemon().pokemons);
@@ -112,11 +112,9 @@ function App() {
               )}
 
               <Routes>
-                <Route
-                  path="/"
-                  element={<PokemonOverview pokemons={filteredPokemon} />}
-                />
+                <Route path="/" element={<PokemonOverview pokemons={filteredPokemon} />}/>
                 <Route path="/:id" element={<PokemonDetails />} />
+                <Route path="/404" element={<NotFound />} />
               </Routes>
             </HashRouter>
           </div>

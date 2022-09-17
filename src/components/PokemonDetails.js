@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { getPokemon } from "../services/services";
 import Arrow from "../assets/icons/arrow.svg";
 
@@ -8,24 +7,30 @@ const PokemonDetails = () => {
   const [pokemons] = useState(getPokemon().pokemons);
   const [pokemon, setPokemon] = useState(getPokemon().pokemons);
   const [evolved, setEvolved] = useState([]);
-
   const [evolutions, setEvolutions] = useState([]);
   const { id } = useParams();
+  const navigate = useNavigate();
+
   useEffect(() => {
     const res = pokemons.filter((el) => {
       return el.name === id.charAt(0).toUpperCase() + id.slice(1);
     });
     setPokemon(res);
 
-    if (res[0].prev_evolution || res[0].next_evolution) {
-      setEvolutions(res[0].prev_evolution || res[0].next_evolution);
-      const mappedResults = evolutions.map((el) => el.num);
-      const filteredResults = pokemons.filter(
-        (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
-      );
-      setEvolved(filteredResults);
+    if (!res[0]) {
+      navigate("/404");
+    } else {
+      if (res[0].prev_evolution || res[0].next_evolution) {
+        setEvolutions(res[0].prev_evolution || res[0].next_evolution);
+        const mappedResults = evolutions.map((el) => el.num);
+        const filteredResults = pokemons.filter(
+          (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
+        );
+        setEvolved(filteredResults);
+      }
     }
-  }, [pokemons, evolutions, id]);
+
+  }, [pokemons, evolutions, id, navigate]);
 
   return (
     <>
@@ -65,16 +70,16 @@ const PokemonDetails = () => {
             )}
           </div>
         </div>
-        <h5 className="text-start mb-4">
+        <h4 className="text-start mb-4">
           {pokemon[0].description}
-        </h5>
+        </h4>
         <h2 className="py-4 text-start">Weaknesses</h2>
         <div className="d-flex flex-wrap mb-4">
           {pokemon[0].weaknesses.map((el, i) => {
             return (
               <h5
                 key={i}
-                className={`${el.toLowerCase()}-type rounded-4 p-3 text-white type me-5`}
+                className={`${el.toLowerCase()}-type rounded-4 p-3 text-white type me-4`}
               >
                 {el}
               </h5>
@@ -82,7 +87,7 @@ const PokemonDetails = () => {
           })}
         </div>
         <h2 className="py-4 text-start">Evolutions</h2>
-        <div className="col d-flex align-items-center">
+        <div className="d-flex align-items-center flex-wrap">
           {pokemon[0].num < evolved.map((el) => el.num) ? (
             <div className="d-flex flex-column align-items-center h-100">
               <img
@@ -91,8 +96,8 @@ const PokemonDetails = () => {
                 className="img-fluid mb-2"
                 width={75}
               />
-                <h4 className="mt-2">{pokemon[0].name}</h4>
-                {evolutions.length !== 0 ? (<span style={{ height: '3px', width: '100%', background: '#fa5c42', marginTop: '-1px' }}></span>) : ''}              
+              <h4 className="mt-2">{pokemon[0].name}</h4>
+              {evolutions.length !== 0 ? (<span className={`${pokemon[0].type[0].toLowerCase()}-type`} style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>) : ''}
             </div>
           ) : (
             ""
@@ -147,7 +152,7 @@ const PokemonDetails = () => {
                   width={75}
                 />
                 <h4 className="mt-2">{pokemon[0].name}</h4>
-                {evolutions.length !== 0 ? (<span style={{ height: '3px', width: '100%', background: '#fa5c42', marginTop: '-1px' }}></span>) : ''}
+                {evolutions.length !== 0 ? (<span className={`${pokemon[0].type[0].toLowerCase()}-type`} style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>) : ''}
               </div>
             </div>
           ) : (

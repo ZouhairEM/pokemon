@@ -6,7 +6,7 @@ import closeIcon from "../assets/icons/close.svg";
 const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPokemons, pokemons, setQuery }) => {
   return (
     <>
-      <div className="row d-flex align-items-start justify-content-between pt-3 pb-3 pb-sm-5 px-3">
+      <div className="row d-flex align-items-start justify-content-between mx-auto pt-3 pb-3 pb-sm-5 px-0 px-sm-3">
         <div className="col d-none d-sm-block d-flex test justify-content-between p-0">
           <div className="wrapper d-flex align-items-start justify-content-start bulbs position-relative">
             <span className="big-bulb me-2">
@@ -30,8 +30,8 @@ const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPok
           </span>
         </div>
         <div className="col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column">
-          <h5 className="d-flex justify-content-start pb-3">
-            Search for Pokémon
+          <h5 className="d-flex justify-content-center pb-3">
+            Search Pokémon
           </h5>
           <div className="d-flex input-group p-1 m-0">
             <input
