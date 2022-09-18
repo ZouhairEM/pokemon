@@ -3,7 +3,7 @@ import pokemonLogo from "../assets/icons/pokemon-logo.svg";
 import FilterIcon from "../assets/icons/filter.svg";
 import closeIcon from "../assets/icons/close.svg";
 
-const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPokemons, pokemons, setQuery }) => {
+const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPokemons, pokemons, setQuery, onOverview }) => {
   return (
     <>
       <div className="row d-flex align-items-start justify-content-between mx-auto pt-3 pb-3 pb-sm-5 px-0 px-sm-3">
@@ -24,12 +24,12 @@ const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPok
           <span className="position-relative">
             <h1 className="col-12 col-sm-8 col-md-6 pokemon-logo mx-auto fw-bold mb-3 p-2 text-white">
               <Link to={"/"}>
-                <img src={pokemonLogo} width={155} alt={pokemonLogo} className="position-absolute top-50 start-0 translate-middle" />
+                <img src={pokemonLogo} width={150} alt={pokemonLogo} />
               </Link>
             </h1>
           </span>
         </div>
-        <div className="col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column">
+        <div className={`col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column ${onOverview ? '' : 'invisible'}`}>
           <h5 className="d-flex justify-content-center pb-3">
             Search Pokémon
           </h5>

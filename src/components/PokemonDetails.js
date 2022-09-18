@@ -3,11 +3,13 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { getPokemon } from "../services/services";
 import Arrow from "../assets/icons/arrow.svg";
 
-const PokemonDetails = () => {
+const PokemonDetails = (props) => {
   const [pokemons] = useState(getPokemon().pokemons);
   const [pokemon, setPokemon] = useState(getPokemon().pokemons);
-  const [evolved, setEvolved] = useState([]);
-  const [evolutions, setEvolutions] = useState([]);
+  const [prevEvolved, setPrevEvolved] = useState([]);
+  const [nextEvolved, setNextEvolved] = useState([]);
+  const [prevEvolutions, setPrevEvolutions] = useState([]);
+  const [nextEvolutions, setNextEvolutions] = useState([]);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -16,21 +18,28 @@ const PokemonDetails = () => {
       return el.name === id.charAt(0).toUpperCase() + id.slice(1);
     });
     setPokemon(res);
-
+    props.hideFilters(false)
     if (!res[0]) {
       navigate("/404");
     } else {
-      if (res[0].prev_evolution || res[0].next_evolution) {
-        setEvolutions(res[0].prev_evolution || res[0].next_evolution);
-        const mappedResults = evolutions.map((el) => el.num);
-        const filteredResults = pokemons.filter(
-          (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
-        );
-        setEvolved(filteredResults);
+      setPrevEvolved([]);
+      setNextEvolved([]);
+
+      if (res[0].prev_evolution) {
+        setPrevEvolutions(res[0].prev_evolution);
+        const mappedResults = prevEvolutions.map((el) => el.num);
+        const filteredResults = pokemons.filter((el) => el.num === mappedResults[0] || el.num === mappedResults[1]);
+        setPrevEvolved(filteredResults);
+      }
+
+      if (res[0].next_evolution) {
+        setNextEvolutions(res[0].next_evolution);
+        const mappedResults = nextEvolutions.map((el) => el.num);
+        const filteredResults = pokemons.filter((el) => el.num === mappedResults[0] || el.num === mappedResults[1]);
+        setNextEvolved(filteredResults);
       }
     }
-
-  }, [pokemons, evolutions, id, navigate]);
+  }, [pokemons, id, navigate, prevEvolutions, nextEvolutions, props]);
 
   return (
     <>
@@ -88,76 +97,100 @@ const PokemonDetails = () => {
         </div>
         <h2 className="py-4 text-start">Evolutions</h2>
         <div className="d-flex align-items-center flex-wrap">
-          {pokemon[0].num < evolved.map((el) => el.num) ? (
+
+          {prevEvolved && prevEvolved.map(el => {
+            return (
+              <div className="d-flex justify-content-center align-content-center" key={el.name}>
+                {el.num > pokemon[0].num ? (
+                  <img src={Arrow} alt="arrow" width={30} className="mx-5" />
+                ) : (
+                  ""
+                )}
+                <Link
+                  to={`/${el.name}`}
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                >
+                  <div className="d-flex flex-column align-items-center">
+                    <img
+                      src={el.img}
+                      alt={el.name}
+                      className="img-fluid"
+                      width={55}
+                    />
+                    <h4 className="text-center mt-2">{el.name}</h4>
+                    <span style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>
+                  </div>
+                </Link>
+                <div className="d-flex">
+                  {el.num < pokemon[0].num ? (
+                    <img
+                      src={Arrow}
+                      alt="arrow"
+                      width={30}
+                      className="mx-5"
+                    />
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            );
+          })}
+
+          {(
             <div className="d-flex flex-column align-items-center h-100">
               <img
                 src={pokemon[0].img}
                 alt={pokemon[0].name}
-                className="img-fluid mb-2"
-                width={75}
+                className="img-fluid"
+                width={55}
               />
               <h4 className="mt-2">{pokemon[0].name}</h4>
-              {evolutions.length !== 0 ? (<span className={`${pokemon[0].type[0].toLowerCase()}-type`} style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>) : ''}
+              {prevEvolutions.length === 0 && nextEvolutions.length === 0 ?
+                (<span style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>)
+                : (<span className={`${pokemon[0].type[0].toLowerCase()}-type`} style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>)
+              }
             </div>
-          ) : (
-            ""
           )}
-          {evolved.map((el, i) => {
+
+          {nextEvolved && nextEvolved.map(el => {
             return (
-              <>
-                <div className="d-flex justify-content-center align-content-center">
-                  {el.num > pokemon[0].num ? (
-                    <img src={Arrow} alt="arrow" width={30} className="mx-5" />
+              <div className="d-flex justify-content-center align-content-center" key={el.name}>
+                {el.num > pokemon[0].num ? (
+                  <img src={Arrow} alt="arrow" width={30} className="mx-5" />
+                ) : (
+                  ""
+                )}
+                <Link
+                  to={`/${el.name}`}
+                  style={{ color: "inherit", textDecoration: "inherit" }}
+                >
+                  <div className="d-flex flex-column align-items-center">
+                    <img
+                      src={el.img}
+                      alt={el.name}
+                      className="img-fluid"
+                      width={55}
+                    />
+                    <h4 className="text-center mt-2">{el.name}</h4>
+                    <span style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>
+                  </div>
+                </Link>
+                <div className="d-flex">
+                  {el.num < pokemon[0].num ? (
+                    <img
+                      src={Arrow}
+                      alt="arrow"
+                      width={30}
+                      className="mx-5"
+                    />
                   ) : (
                     ""
                   )}
-                  <Link
-                    to={`/${el.name}`}
-                    key={i}
-                    style={{ color: "inherit", textDecoration: "inherit" }}
-                  >
-                    <div className="d-flex flex-column align-items-center">
-                      <img
-                        src={el.img}
-                        alt={el.name}
-                        className="img-fluid"
-                        width={75}
-                      />
-                      <h4 className="text-center mt-2">{el.name}</h4>
-                    </div>
-                  </Link>
-                  <div className="d-flex">
-                    {el.num < pokemon[0].num ? (
-                      <img
-                        src={Arrow}
-                        alt="arrow"
-                        width={30}
-                        className="mx-5"
-                      />
-                    ) : (
-                      ""
-                    )}
-                  </div>
                 </div>
-              </>
+              </div>
             );
           })}
-          {pokemon[0].num > evolved.map((el) => el.num) ? (
-            <div className="d-flex">
-              <div className="d-flex flex-column align-items-center">
-                <img
-                  src={pokemon[0].img}
-                  alt={pokemon[0].name}
-                  className="img-fluid"
-                  width={75}
-                />
-                <h4 className="mt-2">{pokemon[0].name}</h4>
-                {evolutions.length !== 0 ? (<span className={`${pokemon[0].type[0].toLowerCase()}-type`} style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>) : ''}
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
         </div>
       </div>
     </>

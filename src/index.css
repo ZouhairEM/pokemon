@@ -6,6 +6,10 @@ body {
   min-width: 350px;
 }
 
+.App {
+  text-align: center;
+}
+
 * {
   font-family: "Press Start 2P", cursive;
   /* outline: solid 1px; */
@@ -101,83 +105,71 @@ main {
 
 .grass-type {
   background: #7c9f74;
-  background: -moz-linear-gradient(top, #7c9f74 25%, #7c9f74 25%, #8ab181 77%);
 }
 
 .fire-type {
   background: #fa5c42;
-  background: -moz-linear-gradient(top, #e9e7e6 26%, #000000 77%);
 }
 
 .water-type {
   background: #9bbde5;
-  background: -moz-linear-gradient(top, #9bbde5 26%, #add2ff 77%);
 }
 
 .poison-type {
   background: #c266c2;
-  background: -moz-linear-gradient(top, #c266c2 26%, #c875c8 77%);
 }
 
 .bug-type {
   background: #b2bf45;
-  background: -moz-linear-gradient(top, #b2bf45 26%, #c1cb6a 77%);
 }
 
 .normal-type,
 .flying-type {
   background: #c9c98c;
-  background: -moz-linear-gradient(top, #c9c98c 28%, #d3d3a3 77%);
 }
 
 .electric-type {
   background: #edcd2f;
-  background: -moz-linear-gradient(top, #edcd2f 28%, #f0d758 77%);
 }
 
 .ground-type {
   background: #ba9c49;
-  background: -moz-linear-gradient(top, #ba9c49 28%, #cfae52 77%);
 }
 
 .fighting-type {
   background: #c6443d;
-  background: -moz-linear-gradient(top, #c6443d 28%, #d26e68 77%);
 }
 
 .psychic-type {
   background: #f1769b;
-  background: -moz-linear-gradient(top, #f1769b 28%, #f391af 77%);
 }
 
 .rock-type {
   background: #807027;
-  background: -moz-linear-gradient(top, #807027 28%, #93802c 77%);
 }
 
 .ice-type {
   background: #98d8d8;
-  background: -moz-linear-gradient(top, #98d8d8 28%, #a2dbdb 77%);
 }
 
 .dragon-type {
   background: #8d5eff;
-  background: -moz-linear-gradient(top, #8d5eff 28%, #9a70ff 77%);
 }
 
 .ghost-type {
   background: #644f88;
-  background: -moz-linear-gradient(top, #644f88 28%, #594679 77%);
 }
 
 .dark-type {
   background: #2f2148;
-  background: -moz-linear-gradient(top, #2f2148 28%, #594679 77%);
 }
 
 .fairy-type {
   background: #95325f;
-  background: -moz-linear-gradient(top, #95325f 28%, #5d1f4e 77%);
+}
+
+.steel-type {
+background: #7c79798f;
 }
 
 .background {
