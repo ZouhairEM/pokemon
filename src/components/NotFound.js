@@ -1,8 +1,13 @@
 import avatar from "../assets/icons/missing.svg";
 import Arrow from "../assets/icons/arrow.svg";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const NotFound = () => {
+const NotFound = (props) => {
+  useEffect(() => {
+    props.hideFilters(false);
+  });
+
   return (
     <div>
       <div className="position-relative">

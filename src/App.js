@@ -144,7 +144,14 @@ function App() {
                     />
                   }
                 />
-                <Route path="/404" element={<NotFound />} />
+                <Route
+                  path="/404"
+                  element={
+                    <NotFound
+                      hideFilters={(onOverview) => setOnOverview(onOverview)}
+                    />
+                  }
+                />
               </Routes>
             </HashRouter>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import PokemonBio from "./PokemonBio";
-import NotFound from "./NotFound";
+import avatar from "../assets/icons/missing.svg";
 
 class PokemonOverview extends React.Component {
   constructor(props) {
@@ -59,6 +59,7 @@ class PokemonOverview extends React.Component {
       }
     }
 
+    // const newHidefilters = this.props.hideFilters(true);
     for (let i = pokemonIndex; i < currentPage * pokemonsPerPage; i++) {
       const pokemonBio = this.props.pokemons[i];
       if (!pokemonBio) break;
@@ -70,7 +71,12 @@ class PokemonOverview extends React.Component {
     return (
       <>
         {currentPokemonsDOM.length === 0 ? (
-          <NotFound />
+          <div className="row pokemon-wrapper justify-content-center align-items-center flex-column">
+            <div>
+              <img src={avatar} alt="avatar" width={200} className="mb-5" />
+              <h2>No Pokémon found</h2>
+            </div>
+          </div>
         ) : (
           <div className="pokemon-wrapper mt-3 mt-sm-0">
             <div className="row">{currentPokemonsDOM}</div>
