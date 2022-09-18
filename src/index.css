@@ -13,9 +13,11 @@ body {
 * {
   font-family: "Press Start 2P", cursive;
 }
+
 h1 {
   text-shadow: 2px 1px #212529;
 }
+
 :root {
   font-size: 50%;
   --black: rgb(31, 31, 31);
@@ -60,6 +62,7 @@ main {
 .pokemon-bio {
   cursor: pointer;
   max-height: 25vh;
+  min-height: 180px;
 }
 
 .filter-group {
@@ -78,7 +81,7 @@ main {
   background-color: var(--red);
 }
 
-.filter-btn:hover > h5{
+.filter-btn:hover > h5 {
   scale: 1.05;
 }
 
@@ -167,7 +170,7 @@ main {
 }
 
 .steel-type {
-background: #7c79798f;
+  background: #7c79798f;
 }
 
 .background {

@@ -17,9 +17,9 @@ const PokemonDetails = (props) => {
     const res = pokemons.filter((el) => {
       return el.name === id.charAt(0).toUpperCase() + id.slice(1);
     });
-    
+
     setPokemon(res);
-    props.hideFilters(false)
+    props.hideFilters(false);
 
     if (!res[0]) {
       navigate("/404");
@@ -30,14 +30,18 @@ const PokemonDetails = (props) => {
       if (res[0].prev_evolution) {
         setPrevEvolutions(res[0].prev_evolution);
         const mappedResults = prevEvolutions.map((el) => el.num);
-        const filteredResults = pokemons.filter((el) => el.num === mappedResults[0] || el.num === mappedResults[1]);
+        const filteredResults = pokemons.filter(
+          (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
+        );
         setPrevEvolved(filteredResults);
       }
 
       if (res[0].next_evolution) {
         setNextEvolutions(res[0].next_evolution);
         const mappedResults = nextEvolutions.map((el) => el.num);
-        const filteredResults = pokemons.filter((el) => el.num === mappedResults[0] || el.num === mappedResults[1]);
+        const filteredResults = pokemons.filter(
+          (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
+        );
         setNextEvolved(filteredResults);
       }
     }
@@ -49,8 +53,14 @@ const PokemonDetails = (props) => {
         <div>
           <div className="position-relative">
             <h1 className="text-center pb-2">{pokemon[0].name}</h1>
-            <Link to={'/'}>
-              <img src={Arrow} alt="arrow" width={30} className="position-absolute top-0 arrow-left" style={{ left: '0%', transform: 'scaleX(-1)' }} />
+            <Link to={"/"}>
+              <img
+                src={Arrow}
+                alt="arrow"
+                width={30}
+                className="position-absolute top-0 arrow-left"
+                style={{ left: "0%", transform: "scaleX(-1)" }}
+              />
             </Link>
           </div>
         </div>
@@ -65,7 +75,9 @@ const PokemonDetails = (props) => {
           />
         </div>
         <div className="d-flex justify-content-between p-0 my-5">
-          <h2 className="fw-bold d-flex align-items-center">#{pokemon[0].num}</h2>
+          <h2 className="fw-bold d-flex align-items-center">
+            #{pokemon[0].num}
+          </h2>
           <div className="d-flex">
             <h3
               className={`${pokemon[0].type[0].toLowerCase()}-type p-3 rounded-4 text-white type`}
@@ -81,9 +93,7 @@ const PokemonDetails = (props) => {
             )}
           </div>
         </div>
-        <h4 className="text-start mb-4">
-          {pokemon[0].description}
-        </h4>
+        <h4 className="text-start mb-4">{pokemon[0].description}</h4>
         <h2 className="py-4 text-start">Weaknesses</h2>
         <div className="d-flex flex-wrap mb-4">
           {pokemon[0].weaknesses.map((el, i) => {
@@ -99,47 +109,56 @@ const PokemonDetails = (props) => {
         </div>
         <h2 className="py-4 text-start">Evolutions</h2>
         <div className="d-flex align-items-center flex-wrap">
-
-          {prevEvolved && prevEvolved.map(el => {
-            return (
-              <div className="d-flex justify-content-center align-content-center" key={el.name}>
-                {el.num > pokemon[0].num ? (
-                  <img src={Arrow} alt="arrow" width={30} className="mx-5" />
-                ) : (
-                  ""
-                )}
-                <Link
-                  to={`/${el.name}`}
-                  style={{ color: "inherit", textDecoration: "inherit" }}
+          {prevEvolved &&
+            prevEvolved.map((el) => {
+              return (
+                <div
+                  className="d-flex justify-content-center align-content-center"
+                  key={el.name}
                 >
-                  <div className="d-flex flex-column align-items-center">
-                    <img
-                      src={el.img}
-                      alt={el.name}
-                      className="img-fluid"
-                      width={55}
-                    />
-                    <h4 className="text-center mt-2">{el.name}</h4>
-                    <span style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>
-                  </div>
-                </Link>
-                <div className="d-flex">
-                  {el.num < pokemon[0].num ? (
-                    <img
-                      src={Arrow}
-                      alt="arrow"
-                      width={30}
-                      className="mx-5"
-                    />
+                  {el.num > pokemon[0].num ? (
+                    <img src={Arrow} alt="arrow" width={30} className="mx-5" />
                   ) : (
                     ""
                   )}
+                  <Link
+                    to={`/${el.name}`}
+                    style={{ color: "inherit", textDecoration: "inherit" }}
+                  >
+                    <div className="d-flex flex-column align-items-center">
+                      <img
+                        src={el.img}
+                        alt={el.name}
+                        className="img-fluid"
+                        width={55}
+                      />
+                      <h4 className="text-center mt-2">{el.name}</h4>
+                      <span
+                        style={{
+                          height: "3px",
+                          width: "100%",
+                          marginTop: "-1px",
+                        }}
+                      ></span>
+                    </div>
+                  </Link>
+                  <div className="d-flex">
+                    {el.num < pokemon[0].num ? (
+                      <img
+                        src={Arrow}
+                        alt="arrow"
+                        width={30}
+                        className="mx-5"
+                      />
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
 
-          {(
+          {
             <div className="d-flex flex-column align-items-center h-100">
               <img
                 src={pokemon[0].img}
@@ -148,51 +167,67 @@ const PokemonDetails = (props) => {
                 width={55}
               />
               <h4 className="mt-2">{pokemon[0].name}</h4>
-              {prevEvolutions.length === 0 && nextEvolutions.length === 0 ?
-                (<span style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>)
-                : (<span className={`${pokemon[0].type[0].toLowerCase()}-type`} style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>)
-              }
+              {prevEvolutions.length === 0 && nextEvolutions.length === 0 ? (
+                <span
+                  style={{ height: "3px", width: "100%", marginTop: "-1px" }}
+                ></span>
+              ) : (
+                <span
+                  className={`${pokemon[0].type[0].toLowerCase()}-type`}
+                  style={{ height: "3px", width: "100%", marginTop: "-1px" }}
+                ></span>
+              )}
             </div>
-          )}
+          }
 
-          {nextEvolved && nextEvolved.map(el => {
-            return (
-              <div className="d-flex justify-content-center align-content-center" key={el.name}>
-                {el.num > pokemon[0].num ? (
-                  <img src={Arrow} alt="arrow" width={30} className="mx-5" />
-                ) : (
-                  ""
-                )}
-                <Link
-                  to={`/${el.name}`}
-                  style={{ color: "inherit", textDecoration: "inherit" }}
+          {nextEvolved &&
+            nextEvolved.map((el) => {
+              return (
+                <div
+                  className="d-flex justify-content-center align-content-center"
+                  key={el.name}
                 >
-                  <div className="d-flex flex-column align-items-center">
-                    <img
-                      src={el.img}
-                      alt={el.name}
-                      className="img-fluid"
-                      width={55}
-                    />
-                    <h4 className="text-center mt-2">{el.name}</h4>
-                    <span style={{ height: '3px', width: '100%', marginTop: '-1px' }}></span>
-                  </div>
-                </Link>
-                <div className="d-flex">
-                  {el.num < pokemon[0].num ? (
-                    <img
-                      src={Arrow}
-                      alt="arrow"
-                      width={30}
-                      className="mx-5"
-                    />
+                  {el.num > pokemon[0].num ? (
+                    <img src={Arrow} alt="arrow" width={30} className="mx-5" />
                   ) : (
                     ""
                   )}
+                  <Link
+                    to={`/${el.name}`}
+                    style={{ color: "inherit", textDecoration: "inherit" }}
+                  >
+                    <div className="d-flex flex-column align-items-center">
+                      <img
+                        src={el.img}
+                        alt={el.name}
+                        className="img-fluid"
+                        width={55}
+                      />
+                      <h4 className="text-center mt-2">{el.name}</h4>
+                      <span
+                        style={{
+                          height: "3px",
+                          width: "100%",
+                          marginTop: "-1px",
+                        }}
+                      ></span>
+                    </div>
+                  </Link>
+                  <div className="d-flex">
+                    {el.num < pokemon[0].num ? (
+                      <img
+                        src={Arrow}
+                        alt="arrow"
+                        width={30}
+                        className="mx-5"
+                      />
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
     </>

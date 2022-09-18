@@ -14,7 +14,7 @@ class PokemonOverview extends React.Component {
   }
 
   componentDidMount() {
-    this.props.hideFilters(true)
+    this.props.hideFilters(true);
   }
 
   componentDidUpdate() {
@@ -70,7 +70,7 @@ class PokemonOverview extends React.Component {
     return (
       <>
         {currentPokemonsDOM.length === 0 ? (
-            <NotFound />
+          <NotFound />
         ) : (
           <div className="pokemon-wrapper mt-3 mt-sm-0">
             <div className="row">{currentPokemonsDOM}</div>

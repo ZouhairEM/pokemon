@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import pokemonLogo from "../assets/icons/pokemon-logo.svg";
 import FilterIcon from "../assets/icons/filter.svg";
 import closeIcon from "../assets/icons/close.svg";
 
-const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPokemons, pokemons, setQuery, onOverview }) => {
+const Header = ({
+  visibility,
+  handleClearInput,
+  handleCheckFilter,
+  query,
+  setPokemons,
+  pokemons,
+  setQuery,
+  onOverview,
+}) => {
   return (
     <>
       <div className="row d-flex align-items-start justify-content-between mx-auto pt-3 pb-3 pb-sm-5 px-0 px-sm-3">
@@ -29,10 +38,12 @@ const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPok
             </h1>
           </span>
         </div>
-        <div className={`col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column ${onOverview ? '' : 'invisible'}`}>
-          <h5 className="d-flex justify-content-center pb-3">
-            Search Pokémon
-          </h5>
+        <div
+          className={`col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column ${
+            onOverview ? "" : "invisible d-none d-sm-block"
+          }`}
+        >
+          <h5 className="d-flex justify-content-center pb-3">Search Pokémon</h5>
           <div className="d-flex input-group p-1 m-0">
             <input
               placeholder="Name"
@@ -44,8 +55,9 @@ const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPok
               ]}
             />
             <span
-              className={`input-icon position-absolute ${query !== "" ? "typing" : "not-typing"
-                }`}
+              className={`input-icon position-absolute ${
+                query !== "" ? "typing" : "not-typing"
+              }`}
               onClick={() => {
                 handleClearInput();
               }}
@@ -65,8 +77,8 @@ const Header = ({ visibility, handleClearInput, handleCheckFilter, query, setPok
           </div>
         </div>
       </div>
-
-    </>);
-}
+    </>
+  );
+};
 
 export default Header;

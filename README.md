@@ -1,6 +1,6 @@
 # Pokémon App
 
-This project was created using React, React Router and Bootstrap UI using a dataset of Pokémon. I mainly created it so that I work with React for the first time, but Pokémon is also something I've loved from my childhood. 
+This project was created using React, React Router and Bootstrap UI using a dataset of Pokémon. I mainly created it so that I could work with React for the first time, but Pokémon is also something I've loved from my childhood. 
 
 ## Setup
 There are three main pages, an overview of the first generation of 151 Pokémon, a details page for each Pokémon with extra information and a 404 page. 

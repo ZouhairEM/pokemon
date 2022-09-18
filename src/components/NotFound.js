@@ -1,13 +1,29 @@
 import avatar from "../assets/icons/missing.svg";
+import Arrow from "../assets/icons/arrow.svg";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-    return (
-        <div className="row pokemon-wrapper justify-content-center align-items-center flex-column">
-            <div>
-                <img src={avatar} alt="avatar" width={200} className="mb-5" />
-                <h2>No Pokémon found</h2>
-            </div>
-        </div>);
-}
+  return (
+    <div>
+      <div className="position-relative">
+        <Link to={"/"}>
+          <img
+            src={Arrow}
+            alt="arrow"
+            width={30}
+            className="position-absolute top-0 arrow-left"
+            style={{ left: "0%", transform: "scaleX(-1)" }}
+          />
+        </Link>
+      </div>
+      <div className="row pokemon-wrapper justify-content-center align-items-center flex-column">
+        <div>
+          <img src={avatar} alt="avatar" width={200} className="mb-5" />
+          <h2>No Pokémon found</h2>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default NotFound;
