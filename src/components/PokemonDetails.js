@@ -17,8 +17,10 @@ const PokemonDetails = (props) => {
     const res = pokemons.filter((el) => {
       return el.name === id.charAt(0).toUpperCase() + id.slice(1);
     });
+    
     setPokemon(res);
     props.hideFilters(false)
+
     if (!res[0]) {
       navigate("/404");
     } else {

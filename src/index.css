@@ -12,7 +12,6 @@ body {
 
 * {
   font-family: "Press Start 2P", cursive;
-  /* outline: solid 1px; */
 }
 h1 {
   text-shadow: 2px 1px #212529;
@@ -27,7 +26,6 @@ h1 {
 #root {
   min-height: 100vh;
   padding: 4em;
-  /* display: flex; */
 }
 
 main {
