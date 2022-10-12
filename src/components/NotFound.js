@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NotFound = (props) => {
   useEffect(() => {
     props.hideFilters(false);
-  });
+  }, [props]);
 
   return (
     <div>

@@ -39,7 +39,6 @@ class PokemonOverview extends React.Component {
     const pokemonLastIndex = currentPage * pokemonsPerPage;
     const pokemonIndex = pokemonLastIndex - pokemonsPerPage;
     const maxPage = Math.ceil(this.props.pokemons.length / pokemonsPerPage);
-
     const pageNumDOM = [];
     const currentPokemonsDOM = [];
 
@@ -59,7 +58,6 @@ class PokemonOverview extends React.Component {
       }
     }
 
-    // const newHidefilters = this.props.hideFilters(true);
     for (let i = pokemonIndex; i < currentPage * pokemonsPerPage; i++) {
       const pokemonBio = this.props.pokemons[i];
       if (!pokemonBio) break;

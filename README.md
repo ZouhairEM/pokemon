@@ -8,3 +8,6 @@ There are three main pages, an overview of the first generation of 151 Pokémon,
 ### Instructions
 
 If you want to run it locally, the application is relatively straightforward. After copying the code, use **npm install** to install dependencies, followed by **npm run start** in your CLI to run the application. You're free to check out the [Github repo](https://github.com/ZouhairEM/pokemon) as well, if you're curious about the history that went into development.
+
+### Live Demo
+Available [here](https://ZouhairEM.github.io/pokemon)

@@ -39,7 +39,7 @@ main {
 
 .active,
 ::selection {
-  background-color: var(--red) !important;
+  background-color: var(--red);
   color: white;
 }
 
@@ -54,8 +54,8 @@ main {
 }
 
 .white-card {
-  border-top-left-radius: 1.5em !important;
-  border-top-right-radius: 1.5em !important;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
   box-shadow: 0px -1px black;
 }
 
@@ -214,10 +214,6 @@ span.typing {
   background: url("../src/assets//icons/close_black.svg") no-repeat left;
 }
 
-img.filter-img {
-  width: 20px !important;
-}
-
 .rounded-hard {
   border-radius: 1.5em;
 }
@@ -255,7 +251,6 @@ img.filter-img {
 
 .pokemon-image {
   top: 17%;
-  max-width: 110px !important;
   user-select: none;
 }
 

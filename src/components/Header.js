@@ -12,7 +12,9 @@ const Header = ({
   pokemons,
   setQuery,
   onOverview,
+  target
 }) => {
+  
   return (
     <>
       <div className="row d-flex align-items-start justify-content-between mx-auto pt-3 pb-3 pb-sm-5 px-0 px-sm-3">
@@ -46,6 +48,7 @@ const Header = ({
           <h5 className="d-flex justify-content-center pb-3">Search Pokémon</h5>
           <div className="d-flex input-group p-1 m-0">
             <input
+              ref={target}
               placeholder="Name"
               className="rounded fw-bold py-2 position-relative w-100"
               maxLength="16"

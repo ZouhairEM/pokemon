@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { getPokemon } from "./services/services";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import PokemonOverview from "./components/PokemonOverview";
@@ -18,20 +18,21 @@ function App() {
   const [onOverview, setOnOverview] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const target = useRef(null);
 
   const handleClearInput = () => {
     setQuery("");
-    document.querySelector("input").value = "";
+    target.current.value = "";
   };
 
   let filteredPokemon = pokemons.filter(({ name }) => {
-    return name.toLowerCase().includes(query.toLowerCase()) ? true : false;
+    return name.toLowerCase().includes(query.toLowerCase());
   });
 
   useEffect(() => {
-    pokemons.forEach((el) => {
-      if (!filterBtns.includes(el.type[0])) {
-        filterBtns.push(el.type[0]);
+    pokemons.forEach((pokemon) => {
+      if (!filterBtns.includes(pokemon.type[0])) {
+        filterBtns.push(pokemon.type[0]);
       }
       setFilterBtns(filterBtns);
     });
@@ -47,8 +48,8 @@ function App() {
   }, [filterBtns, pokemons]);
 
   const handleFilter = (e) => {
-    const filteredByType = filteredPokemons.filter((el) => {
-      return el.type[0] === e;
+    const filteredByType = filteredPokemons.filter((filteredPokemon) => {
+      return filteredPokemon.type[0] === e;
     });
     setPokemons(filteredByType);
     setClearVisible(true);
@@ -64,7 +65,7 @@ function App() {
   };
 
   return (
-    <div className="App mx-auto my-auto">
+    <div className="App mx-auto">
       {!isLoaded && (
         <div className="position-absolute top-50 start-50 translate-middle">
           <div className="spinner">
@@ -85,6 +86,7 @@ function App() {
                 pokemons={pokemons}
                 setQuery={setQuery}
                 onOverview={onOverview}
+                target={target}
               />
 
               {onOverview && (
