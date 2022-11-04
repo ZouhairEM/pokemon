@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
-const PokemonBio = (pokemons) => {
+type Pokemon = {
+  pokemons: {
+    num: number;
+    name: string;
+    img: string;
+    type: string;
+  }
+}
+
+const PokemonBio = (pokemons:Pokemon) => {
   return (
     <div className="pokemon-bio col-12 mx-auto mx-sm-0 col-sm-6 col-md-4 col-lg-3 position-relative py-1 px-3">
       <Link

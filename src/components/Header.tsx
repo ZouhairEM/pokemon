@@ -3,6 +3,27 @@ import pokemonLogo from "../assets/icons/pokemon-logo.svg";
 import FilterIcon from "../assets/icons/filter.svg";
 import closeIcon from "../assets/icons/close.svg";
 
+type Pokemon = {
+  pokemons: {
+    num: number;
+    name: string;
+    img: string;
+    type: string;
+  }
+}
+
+interface Iprops {
+  visibility: boolean;
+  handleClearInput: () => void;
+  handleCheckFilter: () => void;
+  query: string;
+  setPokemons: (arg0: Pokemon) => void;
+  pokemons: Pokemon;
+  setQuery: (arg0: string) => void;
+  onOverview: boolean;
+  target: string;
+}
+
 const Header = ({
   visibility,
   handleClearInput,
@@ -13,7 +34,7 @@ const Header = ({
   setQuery,
   onOverview,
   target
-}) => {
+}:Iprops) => {
   
   return (
     <>
@@ -51,7 +72,7 @@ const Header = ({
               ref={target}
               placeholder="Name"
               className="rounded fw-bold py-2 position-relative w-100"
-              maxLength="16"
+              maxLength={16}
               onChange={(e) => [
                 setPokemons(pokemons),
                 setQuery(e.target.value),

@@ -3,7 +3,11 @@ import Arrow from "../assets/icons/arrow.svg";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const NotFound = (props) => {
+interface IProps {
+  hideFilters: (arg0: boolean) => void;
+}
+
+const NotFound = (props: IProps) => {
   useEffect(() => {
     props.hideFilters(false);
   }, [props]);
