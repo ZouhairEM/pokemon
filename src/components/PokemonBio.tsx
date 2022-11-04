@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 type Pokemon = {
   pokemons: {
@@ -6,15 +6,15 @@ type Pokemon = {
     name: string;
     img: string;
     type: string;
-  }
-}
+  };
+};
 
-const PokemonBio = (pokemons:Pokemon) => {
+const PokemonBio = (pokemons: Pokemon) => {
   return (
     <div className="pokemon-bio col-12 mx-auto mx-sm-0 col-sm-6 col-md-4 col-lg-3 position-relative py-1 px-3">
       <Link
         to={`/${pokemons.pokemons.name.toLowerCase()}`}
-        style={{ color: "inherit", textDecoration: "inherit" }}
+        style={{ color: 'inherit', textDecoration: 'inherit' }}
       >
         <div
           className={`position-relative rounded-hard shadow-sm pt-2 ${pokemons.pokemons.type[0].toLowerCase()}-type background`}
@@ -36,7 +36,7 @@ const PokemonBio = (pokemons:Pokemon) => {
             </div>
             <div
               className="col-12 d-flex flex-column"
-              style={{ height: "100px" }}
+              style={{ height: '100px' }}
             >
               <div className="col-12 cover d-flex justify-content-center">
                 <img

@@ -1,7 +1,7 @@
-import avatar from "../assets/icons/missing.svg";
-import Arrow from "../assets/icons/arrow.svg";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import avatar from '../assets/icons/missing.svg';
+import Arrow from '../assets/icons/arrow.svg';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface IProps {
   hideFilters: (arg0: boolean) => void;
@@ -15,13 +15,13 @@ const NotFound = (props: IProps) => {
   return (
     <div>
       <div className="position-relative">
-        <Link to={"/"}>
+        <Link to={'/'}>
           <img
             src={Arrow}
             alt="arrow"
             width={30}
             className="position-absolute top-0 arrow-left"
-            style={{ left: "0%", transform: "scaleX(-1)" }}
+            style={{ left: '0%', transform: 'scaleX(-1)' }}
           />
         </Link>
       </div>

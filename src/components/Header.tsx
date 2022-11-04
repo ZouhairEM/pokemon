@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import pokemonLogo from "../assets/icons/pokemon-logo.svg";
-import FilterIcon from "../assets/icons/filter.svg";
-import closeIcon from "../assets/icons/close.svg";
+import { Link } from 'react-router-dom';
+import pokemonLogo from '../assets/icons/pokemon-logo.svg';
+import FilterIcon from '../assets/icons/filter.svg';
+import closeIcon from '../assets/icons/close.svg';
 
 type Pokemon = {
   pokemons: {
@@ -9,8 +9,8 @@ type Pokemon = {
     name: string;
     img: string;
     type: string;
-  }
-}
+  };
+};
 
 interface Iprops {
   visibility: boolean;
@@ -33,9 +33,8 @@ const Header = ({
   pokemons,
   setQuery,
   onOverview,
-  target
-}:Iprops) => {
-  
+  target,
+}: Iprops) => {
   return (
     <>
       <div className="row d-flex align-items-start justify-content-between mx-auto pt-3 pb-3 pb-sm-5 px-0 px-sm-3">
@@ -55,7 +54,7 @@ const Header = ({
         <div className="col-12 col-sm-6">
           <span className="position-relative">
             <h1 className="col-12 col-sm-8 col-md-6 pokemon-logo mx-auto fw-bold mb-3 p-2 text-white">
-              <Link to={"/"}>
+              <Link to={'/'}>
                 <img src={pokemonLogo} width={150} alt={pokemonLogo} />
               </Link>
             </h1>
@@ -63,7 +62,7 @@ const Header = ({
         </div>
         <div
           className={`col-12 col-sm-3 my-3 my-sm-0 position-relative d-flex flex-column ${
-            onOverview ? "" : "invisible d-none d-sm-block"
+            onOverview ? '' : 'invisible d-none d-sm-block'
           }`}
         >
           <h5 className="d-flex justify-content-center pb-3">Search Pokémon</h5>
@@ -80,7 +79,7 @@ const Header = ({
             />
             <span
               className={`input-icon position-absolute ${
-                query !== "" ? "typing" : "not-typing"
+                query !== '' ? 'typing' : 'not-typing'
               }`}
               onClick={() => {
                 handleClearInput();
