@@ -2,7 +2,20 @@ import { useState, useEffect } from 'react';
 import PokemonBio from './PokemonBio';
 import avatar from '../assets/icons/missing.svg';
 
-const PokemonOverview = ({ hideFilters, pokemons }) => {
+type Pokemon = {
+  id: number;
+  num: number;
+  name: string;
+  img: string;
+  type: string;
+};
+
+interface IProps {
+  hideFilters: (arg0: boolean) => void;
+  pokemons: Pokemon[];
+}
+
+const PokemonOverview = ({ hideFilters, pokemons }: IProps) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [pokemonsPerPage] = useState(12);
   const [isActive, setIsActive] = useState(1);
@@ -19,7 +32,7 @@ const PokemonOverview = ({ hideFilters, pokemons }) => {
     }
   }, [hideFilters, currentPage, pokemons.length, pokemonsPerPage, maxPage]);
 
-  const handleClick = (e) => {
+  const handleClick = (e: { currentTarget: { id: string } }) => {
     setCurrentPage(+e.currentTarget.id);
     setIsActive(+e.currentTarget.id);
   };
@@ -27,7 +40,7 @@ const PokemonOverview = ({ hideFilters, pokemons }) => {
   if (maxPage > 1) {
     for (let i = 1; i <= maxPage; i++) {
       pageNumDOM.push(
-        <li key={i} id={i} className="p-2 py-1" onClick={handleClick}>
+        <li key={i} id={`${i}`} className="p-2 py-1" onClick={handleClick}>
           <h5
             className={`page-number p-2 mx-1 fw-bold ${
               isActive === i ? 'active' : ''

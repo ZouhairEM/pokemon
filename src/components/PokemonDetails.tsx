@@ -1,16 +1,30 @@
-import { useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { getPokemon } from "../services/services";
-import Arrow from "../assets/icons/arrow.svg";
+import { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { getPokemon } from '../services/services';
+import Arrow from '../assets/icons/arrow.svg';
 
-const PokemonDetails = (props) => {
+interface IProps {
+  hideFilters: (arg0: boolean) => void;
+}
+
+interface EvolutionsType {
+  num: string;
+  name: string;
+  img?: string;
+}
+
+type IdParams = {
+  id: string;
+};
+
+const PokemonDetails = ({ hideFilters }: IProps) => {
   const [pokemons] = useState(getPokemon().pokemons);
   const [pokemon, setPokemon] = useState(getPokemon().pokemons);
-  const [prevEvolved, setPrevEvolved] = useState([]);
-  const [nextEvolved, setNextEvolved] = useState([]);
-  const [prevEvolutions, setPrevEvolutions] = useState([]);
-  const [nextEvolutions, setNextEvolutions] = useState([]);
-  const { id } = useParams();
+  const [prevEvolved, setPrevEvolved] = useState<EvolutionsType[]>([]);
+  const [nextEvolved, setNextEvolved] = useState<EvolutionsType[]>([]);
+  const [prevEvolutions, setPrevEvolutions] = useState<EvolutionsType[]>([]);
+  const [nextEvolutions, setNextEvolutions] = useState<EvolutionsType[]>([]);
+  const { id } = useParams<IdParams>() as IdParams;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,17 +33,19 @@ const PokemonDetails = (props) => {
     });
 
     setPokemon(res);
-    props.hideFilters(false);
+    hideFilters(false);
 
     if (!res[0]) {
-      navigate("/404");
+      navigate('/404');
     } else {
       setPrevEvolved([]);
       setNextEvolved([]);
 
       if (res[0].prev_evolution) {
         setPrevEvolutions(res[0].prev_evolution);
-        const mappedResults = prevEvolutions.map((el) => el.num);
+        const mappedResults = prevEvolutions.map(
+          (el: EvolutionsType) => el.num
+        );
         const filteredResults = pokemons.filter(
           (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
         );
@@ -38,14 +54,16 @@ const PokemonDetails = (props) => {
 
       if (res[0].next_evolution) {
         setNextEvolutions(res[0].next_evolution);
-        const mappedResults = nextEvolutions.map((el) => el.num);
+        const mappedResults = nextEvolutions.map(
+          (el: EvolutionsType) => el.num
+        );
         const filteredResults = pokemons.filter(
           (el) => el.num === mappedResults[0] || el.num === mappedResults[1]
         );
         setNextEvolved(filteredResults);
       }
     }
-  }, [pokemons, id, navigate, prevEvolutions, nextEvolutions, props]);
+  }, [pokemons, id, navigate, prevEvolutions, nextEvolutions, pokemons]);
 
   return (
     <>
@@ -53,13 +71,13 @@ const PokemonDetails = (props) => {
         <div>
           <div className="position-relative">
             <h1 className="text-center pb-2">{pokemon[0].name}</h1>
-            <Link to={"/"}>
+            <Link to={'/'}>
               <img
                 src={Arrow}
                 alt="arrow"
                 width={30}
                 className="position-absolute top-0 arrow-left"
-                style={{ left: "0%", transform: "scaleX(-1)" }}
+                style={{ left: '0%', transform: 'scaleX(-1)' }}
               />
             </Link>
           </div>
@@ -71,7 +89,7 @@ const PokemonDetails = (props) => {
             src={pokemon[0].img}
             alt={pokemon[0].name}
             className="img-fluid"
-            style={{ height: "150px" }}
+            style={{ height: '150px' }}
           />
         </div>
         <div className="d-flex justify-content-between p-0 my-5">
@@ -96,7 +114,7 @@ const PokemonDetails = (props) => {
         <h4 className="text-start mb-4">{pokemon[0].description}</h4>
         <h2 className="py-4 text-start">Weaknesses</h2>
         <div className="d-flex flex-wrap mb-4">
-          {pokemon[0].weaknesses.map((el, i) => {
+          {pokemon[0].weaknesses.map((el: string, i: number) => {
             return (
               <h5
                 key={i}
@@ -110,7 +128,7 @@ const PokemonDetails = (props) => {
         <h2 className="py-4 text-start">Evolutions</h2>
         <div className="d-flex align-items-center flex-wrap">
           {prevEvolved &&
-            prevEvolved.map((el) => {
+            prevEvolved.map((el: EvolutionsType) => {
               return (
                 <div
                   className="d-flex justify-content-center align-content-center"
@@ -119,11 +137,11 @@ const PokemonDetails = (props) => {
                   {el.num > pokemon[0].num ? (
                     <img src={Arrow} alt="arrow" width={30} className="mx-5" />
                   ) : (
-                    ""
+                    ''
                   )}
                   <Link
                     to={`/${el.name}`}
-                    style={{ color: "inherit", textDecoration: "inherit" }}
+                    style={{ color: 'inherit', textDecoration: 'inherit' }}
                   >
                     <div className="d-flex flex-column align-items-center">
                       <img
@@ -135,9 +153,9 @@ const PokemonDetails = (props) => {
                       <h4 className="text-center mt-2">{el.name}</h4>
                       <span
                         style={{
-                          height: "3px",
-                          width: "100%",
-                          marginTop: "-1px",
+                          height: '3px',
+                          width: '100%',
+                          marginTop: '-1px',
                         }}
                       ></span>
                     </div>
@@ -151,7 +169,7 @@ const PokemonDetails = (props) => {
                         className="mx-5"
                       />
                     ) : (
-                      ""
+                      ''
                     )}
                   </div>
                 </div>
@@ -169,19 +187,19 @@ const PokemonDetails = (props) => {
               <h4 className="mt-2">{pokemon[0].name}</h4>
               {prevEvolutions.length === 0 && nextEvolutions.length === 0 ? (
                 <span
-                  style={{ height: "3px", width: "100%", marginTop: "-1px" }}
+                  style={{ height: '3px', width: '100%', marginTop: '-1px' }}
                 ></span>
               ) : (
                 <span
                   className={`${pokemon[0].type[0].toLowerCase()}-type`}
-                  style={{ height: "3px", width: "100%", marginTop: "-1px" }}
+                  style={{ height: '3px', width: '100%', marginTop: '-1px' }}
                 ></span>
               )}
             </div>
           }
 
           {nextEvolved &&
-            nextEvolved.map((el) => {
+            nextEvolved.map((el: EvolutionsType) => {
               return (
                 <div
                   className="d-flex justify-content-center align-content-center"
@@ -190,11 +208,11 @@ const PokemonDetails = (props) => {
                   {el.num > pokemon[0].num ? (
                     <img src={Arrow} alt="arrow" width={30} className="mx-5" />
                   ) : (
-                    ""
+                    ''
                   )}
                   <Link
                     to={`/${el.name}`}
-                    style={{ color: "inherit", textDecoration: "inherit" }}
+                    style={{ color: 'inherit', textDecoration: 'inherit' }}
                   >
                     <div className="d-flex flex-column align-items-center">
                       <img
@@ -206,9 +224,9 @@ const PokemonDetails = (props) => {
                       <h4 className="text-center mt-2">{el.name}</h4>
                       <span
                         style={{
-                          height: "3px",
-                          width: "100%",
-                          marginTop: "-1px",
+                          height: '3px',
+                          width: '100%',
+                          marginTop: '-1px',
                         }}
                       ></span>
                     </div>
@@ -222,7 +240,7 @@ const PokemonDetails = (props) => {
                         className="mx-5"
                       />
                     ) : (
-                      ""
+                      ''
                     )}
                   </div>
                 </div>

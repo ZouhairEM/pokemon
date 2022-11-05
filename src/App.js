@@ -1,17 +1,17 @@
-import "bootstrap/dist/css/bootstrap.css";
-import { getPokemon } from "./services/services";
-import { useState, useEffect, useRef } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import PokemonOverview from "./components/PokemonOverview";
-import PokemonDetails from "./components/PokemonDetails";
-import NotFound from "./components/NotFound";
-import Spinner from "./assets/icons/spinner.svg";
+import 'bootstrap/dist/css/bootstrap.css';
+import { getPokemon } from './services/services';
+import { useState, useEffect, useRef } from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import PokemonOverview from './components/PokemonOverview';
+import PokemonDetails from './components/PokemonDetails';
+import NotFound from './components/NotFound';
+import Spinner from './assets/icons/spinner.svg';
 
 function App() {
   const [pokemons, setPokemons] = useState(getPokemon().pokemons);
   const [filteredPokemons] = useState(pokemons);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [filterBtns, setFilterBtns] = useState([]);
   const [filtersVisible, setFiltersVisible] = useState(false);
   const [clearVisible, setClearVisible] = useState(false);
@@ -21,11 +21,11 @@ function App() {
   const target = useRef(null);
 
   const handleClearInput = () => {
-    setQuery("");
-    target.current.value = "";
+    setQuery('');
+    target.current.value = '';
   };
 
-  let filteredPokemon = pokemons.filter(({ name }) => {
+  const filteredPokemon = pokemons.filter(({ name }) => {
     return name.toLowerCase().includes(query.toLowerCase());
   });
 
@@ -61,7 +61,7 @@ function App() {
     setPokemons(getPokemon().pokemons);
     return clearVisible || isActive
       ? [setIsActive(false), setClearVisible(false)]
-      : "";
+      : '';
   };
 
   return (
@@ -103,7 +103,7 @@ function App() {
                               handleFilter(filterBtn);
                             }}
                             className={`filter-btn p-3 pb-2 me-3 mb-3 ${
-                              isActive === filterBtn ? "active" : ""
+                              isActive === filterBtn ? 'active' : ''
                             } ${filterBtn.toLowerCase()}-type`}
                             key={i}
                           >
